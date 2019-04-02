@@ -1,0 +1,22 @@
+<div class="nb-datepicker-input-area" [class.disabled]="disabled" (click)="onShowCalendar()">
+    <input
+        nbOverlayOrigin
+        #origin="nbOverlayOrigin"
+        readonly
+        type="text"
+        class="nb-datepicker-input"
+        [class.disabled]="disabled"
+        [ngModel]="valueText"
+        [disabled]="disabled">
+</div>
+
+<nb-overlay #overlay placement="bottom-left" (closeHandler)="onFilterPanelHide($event)">
+    <div class="nb-datepicker-calendar-panel">
+        <nb-calendar
+            [disabled]="disabled"
+            [value]="value"
+            [disabledStrategy]="disabledStrategy"
+            (select)="onSelectDate($event)">
+        </nb-calendar>
+    </div>
+</nb-overlay>

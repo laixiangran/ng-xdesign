@@ -1,0 +1,11 @@
+<nb-uploader
+    mode="image"
+    name="demo[]"
+    url="http://10.143.188.29:8083/filestore/file/upload?token=t_ea4c55492db75b52713313bf47050afa"
+    accept="image/*"
+    maxFileCount="6"
+    maxFileSize="1000000"
+    [files]="uploadedFiles"
+    (onSuccess)="onImageUpload($event)">
+    <span>请选择图片，大小在 1M 以内，最多上传 6 张图</span>
+</nb-uploader>

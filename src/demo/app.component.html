@@ -1,0 +1,39 @@
+<div class="demo-app">
+    <div class="app-body">
+        <aside class="app-aside">
+            <div class="description">
+                <h2>
+                    <span>xdesign<small>alpha</small></span>
+                </h2>
+                <section class="desc">
+                    <a href="https://github.com/zxhfighter/measure">
+                        <img alt="xdesign on GitHub" src="https://badgen.net/badge//GitHub?icon=github" width="69"
+                            height="20">
+                    </a>
+                </section>
+                <section class="filter">
+                    <input #input class="search" placeholder="search" (focus)="onFocus()" (keydown)="search()"/>
+                    <div [hidden]="!isOpen || suggestionList.length === 0">
+                        <ul class="suggestion-list">
+                            <li *ngFor="let item of suggestionList" class="suggestion-item" (click)="selectSuggestionValue(item)">
+                                {{ item.text }}
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <ul class="app-aside-list">
+                <li *ngFor="let router of routerList" [routerLinkActive]="router.routerLinkActive"
+                    [routerLink]="router.routerLink"><span [class.currentRouter]="router.currentRouter" [class]="router.class">{{ router.text }}</span></li>
+            </ul>
+        </aside>
+
+        <div class="app-content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+
+    <div class="app-footer">
+
+    </div>
+</div>

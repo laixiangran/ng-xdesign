@@ -1,0 +1,95 @@
+@nb-switch-track-background: #bbb;
+@nb-switch-track-background-checked: @brand-primary;
+@nb-switch-track-background-checked-disabled: #c3e0fe;
+@nb-switch-bar-background: #fff;
+
+.@{prefix}-switch {
+    display: inline-block;
+
+    & > label {
+        display: block;
+        cursor: pointer;
+
+        &.@{prefix}-widget-disabled {
+            pointer-events: none;
+            cursor: not-allowed;
+
+            .@{prefix}-switch-outer {
+                background-color: #dbdbdb;
+
+                .@{prefix}-switch-inner {
+                    background-color: #b8b8b8;
+                }
+
+                &.checked {
+                    background-color: @nb-switch-track-background-checked-disabled;
+                }
+            }
+        }
+    }
+
+    .@{prefix}-switch-outer {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        width: 50px;
+        height: 24px;
+        border-radius: 24px;
+        background-color: @nb-switch-track-background;
+        transition: background-color 300ms ease-in;
+
+        .@{prefix}-switch-inner {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            top: 2px;
+            left: 2px;
+            transform: translate3d(0, 0, 0);
+            background-color: @nb-switch-bar-background;
+            transition: transform 80ms linear;
+        }
+
+        &.checked {
+            background-color: @nb-switch-track-background-checked;
+
+            .@{prefix}-switch-inner {
+                transform: translate3d(26px, 0, 0);
+            }
+        }
+
+        &-dragging {
+            .@{prefix}-switch-inner {
+                cursor: -webkit-grabbing;
+            }
+        }
+    }
+
+    .@{prefix}-switch-label {
+        display: inline-block;
+        margin-left: 10px;
+    }
+}
+
+.@{prefix}-switch-small {
+    .@{prefix}-switch-outer {
+        width: 38px;
+        height: 18px;
+        border-radius: 18px;
+
+        .@{prefix}-switch-inner {
+            width: 14px;
+            height: 14px;
+            border-radius: 14px;
+            top: 2px;
+            left: 2px;
+            transform: translate3d(0, 0, 0);
+        }
+
+        &.checked {
+            .@{prefix}-switch-inner {
+                transform: translate3d(20px, 0, 0);
+            }
+        }
+    }
+}

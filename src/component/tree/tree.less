@@ -1,0 +1,156 @@
+.@{prefix}-tree {
+    display: block;
+    position: relative;
+}
+
+.@{prefix}-tree-node-list {
+    width: 100%;
+    padding: 0 0 0 15px;
+}
+
+.@{prefix}-tree-node {
+    width: 100%;
+    list-style: none;
+}
+
+.@{prefix}-tree-content {
+    width: 90%;
+    height: 36px;
+    line-height: 36px;
+
+    margin-left: 14px;
+
+    span {
+        position: relative;
+        z-index: 1;
+        margin-right: 5px;
+    }
+}
+
+.@{prefix}-tree-node-name {
+    display: inline-block;
+    width: 72%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: bottom;
+}
+
+.@{prefix}-tree-selectable .@{prefix}-tree-content::before, 
+.@{prefix}-tree-selectable .@{prefix}-tree-content::after {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    height: 36px;
+    cursor: pointer;
+}
+
+.@{prefix}-tree-selectable .@{prefix}-tree-content:hover::before {
+    background-color: #f1f1f1;
+}
+
+.@{prefix}-tree-selectable .@{prefix}-tree-content:active::before {
+    background-color: #e7e7e7;
+}
+
+.@{prefix}-tree-selectable .@{prefix}-tree-content:hover,
+// 展开|折叠箭头
+.@{prefix}-tree-node-toggle {
+    cursor: pointer;
+    color: #666;
+}
+
+.@{prefix}-tree-node-toggle {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    margin-top: 8px;
+}
+
+.@{prefix}-tree-selectable .@{prefix}-tree-node-unselectable:hover,
+.@{prefix}-tree-node-unselectable:hover::before {
+    cursor: default;
+}
+
+.@{prefix}-tree-content .@{prefix}-tree-node-selection-candidate-icon,
+.@{prefix}-tree-content .@{prefix}-tree-node-selection-selected-icon {
+    display: none;
+}
+
+.@{prefix}-tree-mode-candidate 
+.@{prefix}-tree-content:hover 
+.@{prefix}-tree-node-selection-candidate-icon,
+.@{prefix}-tree-mode-selected 
+.@{prefix}-tree-content:hover 
+.@{prefix}-tree-node-selection-selected-icon {
+    position: absolute;
+    right: 22px;
+    display: inline-block;
+    margin-right: 0;
+}
+
+// candidate模式
+.@{prefix}-tree-mode-candidate .@{prefix}-tree-content,
+.@{prefix}-tree-mode-candidate .@{prefix}-tree-node-toggle {
+    display: none;
+}
+.@{prefix}-tree-mode-candidate .@{prefix}-tree-node-show {
+    display: inline-block;
+    color: #666;
+}
+
+// 已选择
+.@{prefix}-tree-selectable .@{prefix}-tree-node-selected,
+// 不可选择
+.@{prefix}-tree-selectable .@{prefix}-tree-node-unselectable {
+    color: #999;
+}
+
+// selected模式
+.@{prefix}-tree-mode-selected .@{prefix}-tree-content,
+.@{prefix}-tree-mode-selected .@{prefix}-tree-node-toggle {
+    display: none;
+}
+
+.@{prefix}-tree-mode-selected .@{prefix}-tree-node-show,
+.@{prefix}-tree-mode-selected .@{prefix}-tree-node-toggle-show {
+    display: inline-block;
+    color: #666;
+}
+
+// navigation模式
+.@{prefix}-tree-mode-navigation .@{prefix}-tree-content {
+    display: none;
+}
+
+.@{prefix}-tree-mode-navigation .@{prefix}-tree-node-show {
+    display: inline-block;
+    color: #666;
+}
+
+.@{prefix}-tree-mode-navigation .@{prefix}-tree-node-selected::before {
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    height: 36px;
+    cursor: pointer;
+    background-color: #e7e7e7;
+}
+
+// disabled
+.@{prefix}-tree-disabled .@{prefix}-tree-node-show {
+    color: #999;
+}
+
+.@{prefix}-tree-disabled .icon-arrow-right::before,
+.@{prefix}-tree-disabled .icon-close::before {
+    content: '';
+}
+
+.@{prefix}-tree-disabled .@{prefix}-tree-content:hover {
+    cursor: default;
+}

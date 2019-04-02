@@ -1,0 +1,36 @@
+<h1 class="main-title">nb-transfer</h1>
+
+<p class="type-desc">
+    <span>type</span>:
+    <span class="type-component">Component</span>
+</p>
+
+<section>
+    <h3 class="section-title">Usage</h3>
+
+    <div class="code">
+        <nb-code-highlighter language="js" ngNonBindable>
+            import &#x7B;TransferModule&#x7D; from 'xdesign';
+        </nb-code-highlighter>
+    </div>
+</section>
+
+<h3 class="section-title">Examples</h3>
+
+<nb-code-box [tsCode]="tsCodeBasic" [htmlCode]="htmlCodeBasic" [lessCode]="lessCodeBasic">
+    <h3 nb-codebox-title>Basic</h3>
+    <div nb-codebox-desc>
+        <p>1.<code>nb-transfer</code>用于实现左右列表选项状态互相转化。</p>
+        <p>2.<code>nb-transfer</code>左侧备选项和右侧已选项默认<code>tree</code>类型。</p>
+        <p>3.<code>nb-transfer</code>左侧备选项<code>candidateData</code>和右侧已选项<code>selectedData</code>用于接收展示左右两侧数据结构的数据，数据模型参考<code>tree</code>。</p>
+        <p>4.<code>nb-transfer</code>有<code>disabled</code>属性，用于置灰处理，为不可编辑状态。</p>
+        <p>5.<code>nb-transfer</code>有<code>getValue</code>事件，用于获取已选选项值，可以用于form表单。</p>
+    </div>
+
+    <demo-transfer-basic></demo-transfer-basic>
+</nb-code-box>
+
+<h3 class="section-title">API</h3>
+<!-- api(transfer.html) -->
+<!-- api(tree-transfer.html) -->
+<!-- api(table-transfer.html) -->

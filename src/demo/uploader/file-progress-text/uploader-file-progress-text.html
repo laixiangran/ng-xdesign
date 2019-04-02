@@ -1,0 +1,11 @@
+<nb-uploader
+    mode="file"
+    name="demo[]"
+    url="./uploader"
+    accept="image/*"
+    maxFileCount="6"
+    maxFileSize="1000000"
+    [files]="uploadedFiles"
+    (onSuccess)="onFileUpload()">
+    <span>请选择文件，大小在 1M 以内，最多上传 6 个文件</span>
+</nb-uploader>

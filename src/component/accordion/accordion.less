@@ -1,0 +1,38 @@
+
+@accordion-panel-bottom-margin: 0.2em;
+@accordion-panel-header-padding: 0.5em 0.5em 0.5em 1em;
+@accordion-panel-header-border-radius: 0;
+@accordion-panel-header-transition-time: 0.24s;
+
+.@{prefix}-accordion {
+    display: block;
+
+    &-panel {
+        margin-bottom: @accordion-panel-bottom-margin;
+    }
+
+    &-panel-header {
+        cursor: pointer;
+        padding: @accordion-panel-header-padding;
+        position: relative;
+        border-radius: @accordion-panel-header-border-radius;
+
+        .icon-right {
+            display: inline-block;
+            transition: transform @accordion-panel-header-transition-time,
+                -webkit-transform @accordion-panel-header-transition-time;
+            transform: rotate(0);
+            -webkit-transform: rotate(0);
+        }
+    }
+
+    &-panel-active {
+        .icon-right {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+
+
+

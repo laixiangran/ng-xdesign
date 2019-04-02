@@ -1,0 +1,39 @@
+<h1 class="main-title">nb-chart</h1>
+<p class="type-desc">
+    <span>type</span>:
+    <span class="type-component">Component</span>
+</p>
+
+<p class="type-desc">
+    <span>selector</span>: <code>nb-chart</code>
+</p>
+
+<p class="type-desc">
+    <span>exportAs</span>: <code>nbChart</code>
+</p>
+
+<section>
+    <h3 class="section-title">Usage</h3>
+
+    <div class="code">
+        <nb-code-highlighter language="js" ngNonBindable>
+            import &#x7B;ChartModule&#x7D; from 'xdesign';
+        </nb-code-highlighter>
+    </div>
+</section>
+
+<h3 class="section-title">Examples</h3>
+
+<nb-code-box [tsCode]="tsCodeBasic" [htmlCode]="htmlCodeBasic" [lessCode]="lessCodeBasic">
+    <h3 nb-codebox-title>Chart Basic</h3>
+    <p nb-codebox-desc>
+        <code>nb-chart</code> 底层使用了 <a target="_blank" href="http://echarts.baidu.com">Echarts</a>，
+        属性包括 <code>width</code>、<code>height</code>、<a target="_blank" href="http://echarts.baidu.com/option.html"><code>options</code></a> 等。
+    </p>
+
+    <demo-chart-basic></demo-chart-basic>
+</nb-code-box>
+
+<h3 class="section-title">API</h3>
+
+<!-- api(chart.html) -->

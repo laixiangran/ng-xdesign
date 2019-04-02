@@ -1,0 +1,24 @@
+@import './variable.less';
+
+.@{prefix}-widget {
+    font-family: @font-family-base;
+    font-size: @font-size-base;
+    color: @text-color-normal;
+    box-sizing: border-box;
+}
+
+.@{prefix}-corner {
+    border-radius: @border-radius;
+}
+
+.@{prefix}-widget-disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.hide {
+    display: none;
+}
+.invisible {
+    visibility: hidden;
+}

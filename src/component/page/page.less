@@ -1,0 +1,91 @@
+.@{prefix}-page {
+    display: block;
+    font-family: 'HelveticaNeue,Helvetica,Arial,sans-serif';
+    font-size: 14px;
+    line-height: 30px;
+
+    .total {
+        padding: 0 3px;
+        color: #666;
+    }
+}
+
+.@{prefix}-page-size-sm {
+    .@{prefix}-page {
+        height: 32px;
+        font-size: 12px;
+    }
+}
+
+.page-turn .arrow {
+    display: inline-block;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    color: #666;
+    text-align: center;
+    border: 1px solid @nb-gray-5;
+}
+.page-turn {
+    .arrow-disable {
+        color: #d8d8d8;
+        background-color: #eee;
+        &:hover {
+            color: #d8d8d8;
+            background-color: #eee;
+        }
+    }
+    .nb-button {
+        margin-right: 20px;
+        padding: 0 10px;
+    }
+}
+.page-turn > span {
+    margin: 0 2px;
+    padding: 4px 10px;
+    color: #999;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.page-turn > span:hover {
+    color: #333;
+    background-color: #f7f7f7;
+}
+
+.page-turn .turn-on {
+    color: #333;
+    background-color: #eee;
+    &:hover {
+        color: #333;
+        background-color: #eee;
+    }
+}
+
+.page-turn .form-control {
+    width: 30px;
+    height: 23px;
+    text-align: center;
+}
+
+.page-turn .btn {
+    margin-top: -3px;
+    padding: 0;
+    min-width: 40px;
+    height: 28px;
+}
+
+.page-turn .go-page {
+    margin: 0 5px;
+    font-style: normal;
+}
+.page-turn {
+    .total-page {
+        &:hover {
+            color: #999;
+            background-color: #fff;
+        }
+    }
+}

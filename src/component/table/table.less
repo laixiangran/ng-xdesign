@@ -1,0 +1,303 @@
+@table-head-backgroud-color: #fff;
+@table-head-top-border-color: #fff;
+@table-color: #666;
+@table-body-color: #333;
+@table-row-odd: #fff;
+@table-row-even: #fff;
+@table-row-hover: #f7f7f7;
+@table-row-checked: #fcfcfc;
+@table-row-bottom-color: #eee;
+
+@table-row-height: 45px;
+@table-font-size: 14px;
+
+// main 14px table
+.@{prefix}-table {
+    width: 100%;
+    position: relative;
+    border-collapse: collapse;
+
+    &-row {
+        border-bottom: 1px solid @table-row-bottom-color;
+
+        .@{prefix}-table-td:first-of-type {
+            padding-left: 1.428em;
+        }
+    }
+
+    &-head {
+        .@{prefix}-table-row {
+            background-color: #fff;
+        }
+
+        .@{prefix}-table-th {
+            position: relative;
+
+            .table-resize-bar {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 5px;
+                height: 100%;
+                cursor: col-resize;
+                z-index: 100;
+            }
+
+            &:last-of-type {
+                .table-resize-bar {
+                    display: none;
+                }
+            }
+        }
+
+        .iconfont {
+            font-weight: normal;
+            display: inline-block;
+            font-size: 12px;
+        }
+
+        .icon-help {
+            margin-left: 8px;
+        }
+
+        .icon-filter {
+            margin-left: 8px;
+
+            &.active {
+                color: @brand-primary;
+            }
+        }
+
+        .field-title-wrapper {
+            display: inline-block;
+        }
+    }
+
+    &-body {
+        .@{prefix}-table-row {
+            &:nth-child(2n) {
+                background-color: @table-row-even;
+            }
+
+            &:nth-child(2n+1) {
+                background-color: @table-row-odd;
+            }
+
+            &:hover {
+                background-color: @table-row-hover;
+            }
+
+            &-checked {
+                background-color: @table-row-checked !important;
+            }
+        }
+    }
+
+    &-th,
+    &-td {
+        padding: 13px 10px;
+        word-break: break-all;
+    }
+
+    &-td {
+        line-height: 2;
+
+        .splitter {
+            display: inline-block;
+            width: 2px;
+            height: 10px;
+            background-color: #e5e5e5;
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        &-edit {
+            position: relative;
+
+            .icon-edit {
+                cursor: pointer;
+                display: none;
+            }
+
+            .@{prefix}-table-td-wrapper {
+                border: 1px solid transparent;
+            }
+
+            &:hover {
+                .@{prefix}-table-td-wrapper {
+                    border: 1px solid #e7e7e7;
+                    background-color: #fff;
+                }
+
+                .icon-edit {
+                    display: inline-block;
+                    margin-left: 8px;
+                }
+            }
+        }
+
+        &-left {
+            text-align: left;
+        }
+
+        &-center {
+            text-align: center;
+        }
+
+        &-right {
+            text-align: right;
+        }
+    }
+
+    .@{prefix}-table-resize-line {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        border-right: 1px dashed #999;
+    }
+
+    .@{prefix}-table-loading-layer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.1);
+        text-align: center;
+
+        .loading-content {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-12px, -12px);
+            color: @brand-primary;
+            .icon-loading {
+                font-size: 24px;
+                position: absolute;
+                -webkit-animation: nb-animation-rotate 800ms infinite linear;
+                animation: nb-animation-rotate 800ms infinite linear;
+            }
+        }
+    }
+
+    &-bordered {
+        .@{prefix}-table-td {
+            border: 1px solid #eee;
+        }
+
+        .@{prefix}-table-td {
+            padding-left: 7px !important;
+        }
+    }
+
+    .hide {
+        display: none;
+    }
+}
+
+// small 14px table
+.@{prefix}-table-small {
+    .@{prefix}-table-th,
+    .@{prefix}-table-td {
+        padding: 8px;
+    }
+}
+
+// small 12px table
+.@{prefix}-table-x-small {
+    font-size: 12px;
+    .@{prefix}-table-td {
+        padding: 8px;
+    }
+}
+
+.@{prefix}-table-resizable {
+    .@{prefix}-table-head {
+        .@{prefix}-table-th {
+            &:hover {
+                background: @table-row-hover;
+            }
+        }
+    }
+}
+
+.table-tip-panel {
+    position: absolute;
+    background-color: #fff;
+    color: #333;
+    padding: 10px;
+    z-index: 11;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 1px;
+    font-weight: normal;
+}
+
+.table-filter-panel {
+    // position: absolute;
+    background-color: #fff;
+    padding: 15px;
+    z-index: 10;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 1px;
+    font-weight: normal;
+    width: max-content;
+
+    .filter-content-button {
+        margin-top: 10px;
+
+        .nb-button {
+            height: 28px;
+        }
+
+        .nb-button-theme-primary {
+            margin-right: 8px;
+        }
+    }
+}
+
+.sort-group {
+    display: inline-block;
+    position: relative;
+    width: 12px;
+    height: 16px;
+    margin-left: 8px;
+    font-weight: normal;
+    cursor: pointer;
+
+    .iconfont {
+        position: absolute;
+        top: 0;
+    }
+
+    .icon-sort-desc {
+        left: 0;
+    }
+
+    .icon-sort-asc {
+        right: 0;
+    }
+
+    &:hover {
+        .icon-sort-asc,
+        .icon-sort-desc {
+            color: @brand-primary;
+        }
+    }
+
+    &-desc {
+        // 图标库中 icon-sort-asc 其实为降序图标
+        .icon-sort-asc {
+            color: @brand-primary;
+        }
+    }
+
+    &-asc {
+        // 图标库中 icon-sort-asc 其实为升序图标
+        .icon-sort-desc {
+            color: @brand-primary;
+        }
+    }
+}

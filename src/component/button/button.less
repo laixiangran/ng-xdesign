@@ -1,0 +1,183 @@
+@nb-button-default-background-color: #f7f7f7;
+@nb-button-default-background-color-active: #e7e7e7;
+
+@nb-button-neutral-background-color: #e7e7e7;
+@nb-button-neutral-background-color-active: #dbdbdb;
+
+// --- layout ---
+.@{prefix}-button {
+    border-radius: @border-radius;
+    user-select: none;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border: 1px solid @border-color;
+    cursor: pointer;
+
+    &:focus,
+    &:active {
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+a.@{prefix}-button {
+    display: inline-block;
+    color: @brand-primary;
+    background: none;
+    border: none;
+
+    &:hover {
+        background: none;
+        color: darken(@brand-primary, 10%);
+    }
+}
+
+
+// sizes
+.@{prefix}-button-size-lg {
+    height: 42px;
+    font-size: 18px;
+}
+a.@{prefix}-button-size-lg {
+    line-height: 42px;
+}
+
+.@{prefix}-button-size-default {
+    height: 36px;
+    font-size: 14px;
+}
+a.@{prefix}-button-size-default {
+    line-height: 36px;
+}
+
+.@{prefix}-button-size-sm {
+    height: 32px;
+    font-size: 14px;
+}
+a.@{prefix}-button-size-sm {
+    line-height: 32px;
+}
+
+.@{prefix}-button-size-xs {
+    height: 28px;
+    font-size: 12px;
+}
+a.@{prefix}-button-size-xs {
+    line-height: 28px;
+}
+
+// themes
+.@{prefix}-button-theme-primary {
+    color: @nb-white;
+    background-color: @brand-primary;
+    border-color: @brand-primary;
+
+    &:hover {
+        background-color: darken(@brand-primary, 10%);
+    }
+
+    &:active {
+        background-color: darken(@brand-primary, 20%);
+    }
+}
+
+.@{prefix}-button-theme-default {
+    background-color: @nb-white;
+    border-color: @border-color;
+
+    &:hover {
+        background-color: @nb-button-default-background-color;
+        color: @text-color-dark;
+    }
+
+    &:active {
+        background-color: @nb-button-default-background-color-active;
+        color: @text-color-dark;
+    }
+
+    &:focus {
+        color: @brand-primary;
+    }
+}
+
+.@{prefix}-button-theme-neutral {
+    background-color: #eee;
+    border-color: #eee;
+
+    &:hover {
+        background-color: @nb-button-neutral-background-color;
+        color: @text-color-dark;
+    }
+
+    &:active {
+        background-color: @nb-button-neutral-background-color-active;
+        color: @text-color-dark;
+    }
+
+    &:focus {
+        color: @brand-primary;
+    }
+}
+
+.@{prefix}-button-theme-transparent {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.@{prefix}-button-theme-yellow {
+    background-color: #ff0;
+    color: @nb-black;
+    border-color: #ff0;
+
+    &:hover {
+        background-color: darken(#ff0, 10%);
+    }
+
+    &:active {
+        background-color: darken(#ff0, 20%);
+    }
+}
+
+.@{prefix}-button-theme-icon {
+    padding: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+
+    font-weight: 600;
+    color: @nb-white;
+    background-color: @brand-primary;
+    border-color: @brand-primary;
+
+    &:hover {
+        background-color: darken(@brand-primary, 10%);
+    }
+
+    &:active {
+        background-color: darken(@brand-primary, 20%);
+    }
+}
+
+
+// disabled
+.@{prefix}-button:disabled {
+    background-color: #eee !important;
+    color: #b8b8b8 !important;
+    border: 1px solid transparent !important;
+    cursor: not-allowed !important;
+
+    &:active {
+        box-shadow: none !important;
+    }
+}
+
+a.@{prefix}-button[disabled] {
+    background-color: transparent;
+    color: #b8b8b8;
+    cursor: not-allowed;
+
+    &:hover,
+    &:active {
+        background-color: transparent;
+    }
+}

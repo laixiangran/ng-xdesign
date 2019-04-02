@@ -1,0 +1,47 @@
+<div class="nb-rangedatepicker-input-area" (click)="onShowCalendar()">
+    <input
+        nbOverlayOrigin
+        #origin="nbOverlayOrigin"
+        readonly
+        type="text"
+        class="nb-rangedatepicker-input"
+        [ngModel]="valueText"
+        [disabled]="disabled">
+</div>
+
+<nb-overlay #overlay placement="bottom-left" (closeHandler)="onFilterPanelHide($event)">
+    <div class="nb-rangedatepicker-calendar-panel">
+        <div class="nb-rangedatepicker-quicklinks">
+            <div
+                *ngFor="let quicklink of quickLinks"
+                class="nb-rangedatepicker-quicklink"
+                [class.nb-rangedatepicker-quicklink-selected]="quicklink.selected"
+                (click)="onClickQuickLink(quicklink)">
+                {{ quicklink.text }}
+            </div>
+        </div>
+        <div class="nb-rangedatepicker-calendars">
+            <nb-calendar
+                [value]="value.startDate"
+                [startDate]="_startDate"
+                [endDate]="_endDate"
+                [disabled]="disabled"
+                [disabledStrategy]="disabledStrategy"
+                (select)="onSelectStartDate($event)">
+            </nb-calendar>
+            <nb-calendar
+                [value]="value.endDate"
+                [startDate]="_startDate"
+                [endDate]="_endDate"
+                [disabled]="disabled"
+                [disabledStrategy]="disabledStrategy"
+                (select)="onSelectEndDate($event)">
+            </nb-calendar>
+        </div>
+
+        <div class="nb-rangedatepicker-buttons">
+            <button (click)="onConfirm()" nb-button theme="primary" size="xs" type="button">确定</button>
+            <button (click)="onCancel()"  nb-button theme="default" size="xs" type="button">取消</button>
+        </div>
+    </div>
+</nb-overlay>

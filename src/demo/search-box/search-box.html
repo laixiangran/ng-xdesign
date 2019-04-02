@@ -1,0 +1,41 @@
+<h1 class="main-title">nb-search-box</h1>
+
+<p class="type-desc">
+    <span>type</span>:
+    <span class="type-component">Component</span>
+</p>
+
+<section>
+    <h3 class="section-title">Usage</h3>
+
+    <div class="code">
+        <nb-code-highlighter language="js" ngNonBindable>
+            import &#x7B;SearchBoxModule&#x7D; from 'xdesign';
+        </nb-code-highlighter>
+    </div>
+</section>
+
+<h3 class="section-title">Examples</h3>
+
+<nb-code-box [tsCode]="tsCodeBasic" [htmlCode]="htmlCodeBasic" [lessCode]="lessCodeBasic">
+    <h3 nb-codebox-title>Basic</h3>
+    <div nb-codebox-desc>
+        <p>1.<code>nb-search-box</code>用于输入关键词去查询与关键词匹配的结果。</p>
+        <p>2.<code>nb-search-box</code>有<code>type</code>用于设置主题，有两种内置类型，分别是：ico, btn</p>
+        <p>3.<code>nb-search-box</code>有<code>disabled</code> 属性，用于置灰处理，为不可编辑状态。</p>
+        <p>4.<code>nb-search-box</code>有<code>value</code>属性，表示当前的关键词的值。</p>
+    </div>
+
+    <demo-search-box-basic></demo-search-box-basic>
+</nb-code-box>
+<nb-code-box [tsCode]="tsCodeSuggest" [htmlCode]="htmlCodeSuggest" [lessCode]="lessCodeSuggest">
+    <h3 nb-codebox-title>SearchBox with suggest</h3>
+    <div nb-codebox-desc>
+        <p><code>nb-search-box</code>有<code>isSuggestion</code>属性，用于是否联想提示已输入的关键词结果。</p>
+    </div>
+
+    <demo-search-box-suggest></demo-search-box-suggest>
+</nb-code-box>
+
+<h3 class="section-title">API</h3>
+<!-- api(search-box.html) -->
