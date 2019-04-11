@@ -1,6 +1,6 @@
 {
-  "name": "xdesign",
-  "version": "7.0.36",
+  "name": "ng-xdesign-test",
+  "version": "0.0.1",
   "description": "xdesign - A enterprize angular ui component library",
   "main": "./bundle/xdesign.umd.min.js",
   "sideEffects": false,
@@ -21,7 +21,7 @@
     "docs": "gulp docs"
   },
   "keywords": [],
-  "author": "zengxiaohui <369749456@qq.com>",
+  "author": "laixiangran <laixiangran@163.com>",
   "license": "MIT",
   "dependencies": {
     "@angular/animations": "^7.1.2",
@@ -146,6 +146,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zxhfighter/measure.git"
+    "url": "https://github.com/laixiangran/ng-xdesign.git"
   }
 }
