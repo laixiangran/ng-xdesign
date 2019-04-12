@@ -17,24 +17,15 @@ const branch = "develop";
 task(
     "commit",
     sequenceTask(
-        // 'lint',
-        // 'test:once',
-        // 'build',
-        // 'bump-version',
-        // 'changelog',
+        "lint",
+        "test:once",
+        "build",
+        "bump-version",
+        "changelog",
         "commit-changes",
         "push-changes"
-    )
-);
-
-task(
-    "release",
-    sequenceTask(
-        // 'lint',
-        // 'test:once',
-        // 'build',
-        "create-new-tag",
-        "github-release"
+        // 'create-new-tag',
+        // 'github-release'
     )
 );
 
@@ -69,7 +60,7 @@ task("commit-changes", () => {
     const commitMsg = yargs.argv.m;
     return src(".")
         .pipe(git.add())
-        .pipe(git.commit(commitMsg));
+        .pipe(git.commit(commitMsg || "【Prerelease】Bumped version number"));
 });
 
 task("push-changes", (cb: any) => {

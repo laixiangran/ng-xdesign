@@ -1,35 +1,16 @@
 {
-    "rulesDirectory": [
-        "./tools/tslint-rules/",
-        "node_modules/codelyzer"
-    ],
+    "rulesDirectory": ["./tools/tslint-rules/", "node_modules/codelyzer"],
     "rules": {
         "class-name": true,
-        "comment-format": [
-            true,
-            "check-space"
-        ],
+        "comment-format": [true, "check-space"],
         "curly": true,
         "eofline": true,
         "forin": true,
         "import-spacing": true,
-        "indent": [
-            true,
-            "spaces",
-            4
-        ],
-        "linebreak-style": [
-            true,
-            "LF"
-        ],
-        "max-line-length": [
-            true,
-            140
-        ],
-        "member-access": [
-            true,
-            "no-public"
-        ],
+        "indent": [true, "spaces", 4],
+        "linebreak-style": [true, "LF"],
+        "max-line-length": [true, 140],
+        "member-access": [true, "no-public"],
         "no-arg": true,
         "no-bitwise": true,
         "no-debugger": true,
@@ -41,24 +22,10 @@
         "no-trailing-whitespace": true,
         "no-unused-expression": true,
         "no-var-keyword": true,
-        "one-line": [
-            true,
-            "check-open-brace",
-            "check-whitespace"
-        ],
-        "quotemark": [
-            true,
-            "single",
-            "avoid-escape"
-        ],
-        "semicolon": [
-            true,
-            "always"
-        ],
-        "triple-equals": [
-            true,
-            "allow-null-check"
-        ],
+        "one-line": [true, "check-open-brace", "check-whitespace"],
+        "quotemark": [true, "single", "avoid-escape"],
+        "semicolon": [true, "always"],
+        "triple-equals": [true, "allow-null-check"],
         "typedef-whitespace": [
             true,
             {
@@ -85,18 +52,9 @@
             "check-preblock"
         ],
 
-        "angular-whitespace": [
-            true,
-            "check-interpolation",
-            "check-pipe"
-        ],
+        "angular-whitespace": [true, "check-interpolation", "check-pipe"],
         "import-destructuring-spacing": true,
-        "directive-selector": [
-            true,
-            "attribute",
-            "nb",
-            "camelCase"
-        ],
+        "directive-selector": [true, "attribute", "nb", "camelCase"],
         "component-selector": [
             true,
             ["element", "attribute"],
@@ -107,18 +65,11 @@
         "use-output-property-decorator": true,
         "no-input-rename": true,
         "no-output-rename": true,
-        "component-class-suffix": [
-            true,
-            "Component",
-            "Demo"
-        ],
-        "directive-class-suffix": [
-            true,
-            "Directive",
-            "Demo"
-        ],
+        "component-class-suffix": [true, "Component", "Demo"],
+        "directive-class-suffix": [true, "Directive", "Demo"],
         "use-life-cycle-interface": true,
         "use-pipe-transform-interface": true,
         "no-todo": true
-    }
+    },
+    "extends": ["tslint:latest", "tslint-config-prettier"]
 }
