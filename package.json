@@ -1,6 +1,6 @@
 {
     "name": "ng-xdesign-test",
-    "version": "7.2.14",
+    "version": "7.2.15",
     "description": "xdesign - A enterprize angular ui component library",
     "main": "./bundle/xdesign.umd.min.js",
     "sideEffects": false,
@@ -156,6 +156,11 @@
         "moment": "^2.19.1",
         "echarts": "^4.0.2",
         "prismjs": "^1.8.4"
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+        }
     },
     "config": {
         "commitizen": {
