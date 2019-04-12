@@ -26,8 +26,8 @@
         "clean": "gulp clean",
         "component": "gulp generate:component",
         "docs": "gulp docs",
-        "commit": "gulp commit",
-        "release": "gulp release"
+        "changelog": "gulp changelog",
+        "release": "standard-version"
     },
     "dependencies": {
         "@angular/animations": "~7.2.0",
