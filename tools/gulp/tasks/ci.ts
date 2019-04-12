@@ -20,7 +20,7 @@ task('commit', sequenceTask(
     'build',
     'bump-version',
     'changelog',
-    'commit-changes',
+    // 'commit-changes',
     // 'push-changes'
     // 'create-new-tag',
     // 'github-release'
