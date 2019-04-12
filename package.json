@@ -1,6 +1,6 @@
 {
     "name": "ng-xdesign-test",
-    "version": "7.2.11",
+    "version": "7.2.14",
     "description": "xdesign - A enterprize angular ui component library",
     "main": "./bundle/xdesign.umd.min.js",
     "sideEffects": false,
@@ -26,7 +26,9 @@
         "clean": "gulp clean",
         "component": "gulp generate:component",
         "docs": "gulp docs",
-        "release": "gulp relase"
+        "commit": "gulp commit",
+        "release": "gulp relase",
+        "m": "gulp commit-changes"
     },
     "dependencies": {
         "@angular/animations": "~7.2.0",
@@ -154,11 +156,6 @@
         "moment": "^2.19.1",
         "echarts": "^4.0.2",
         "prismjs": "^1.8.4"
-    },
-    "husky": {
-        "hooks": {
-            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-        }
     },
     "config": {
         "commitizen": {

@@ -1,3 +1,23 @@
+<a name="7.2.14"></a>
+## [7.2.14](https://github.com/laixiangran/ng-xdesign/compare/7.2.12...7.2.14) (2019-04-12)
+
+
+
+<a name="7.2.13"></a>
+## [7.2.13](https://github.com/laixiangran/ng-xdesign/compare/7.2.12...7.2.13) (2019-04-12)
+
+
+
+<a name="7.2.12"></a>
+## [7.2.12](https://github.com/laixiangran/ng-xdesign/compare/7.2.9...7.2.12) (2019-04-12)
+
+
+### Bug Fixes
+
+* test11111 ([c4cf4a6](https://github.com/laixiangran/ng-xdesign/commit/c4cf4a6))
+
+
+
 <a name="7.2.11"></a>
 ## [7.2.11](https://github.com/laixiangran/ng-xdesign/compare/7.2.9...7.2.11) (2019-04-12)
 

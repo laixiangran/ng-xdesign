@@ -15,22 +15,14 @@ const yargs = require('yargs');
 const branch = 'master';
 
 task('commit', sequenceTask(
-    'lint',
-    'test:once',
-    'build',
+    // 'lint',
+    // 'test:once',
+    // 'build',
     'bump-version',
-    'changelog',
-    // 'commit-changes',
-    // 'push-changes'
-    // 'create-new-tag',
-    // 'github-release'
+    'changelog'
 ));
 
 task('relase', sequenceTask(
-    'bump-version',
-    'changelog',
-    'commit-changes',
-    'push-changes',
     'create-new-tag',
     'github-release'
 ));
