@@ -70,6 +70,5 @@
         "use-life-cycle-interface": true,
         "use-pipe-transform-interface": true,
         "no-todo": true
-    },
-    "extends": ["tslint:latest", "tslint-config-prettier"]
+    }
 }

@@ -26,7 +26,6 @@
         "clean": "gulp clean",
         "component": "gulp generate:component",
         "docs": "gulp docs",
-        "changelog": "gulp changelog",
         "commit": "gulp commit",
         "release": "gulp release"
     },
@@ -121,8 +120,6 @@
         "less-loader": "^4.0.5",
         "less-plugin-autoprefix": "^1.5.1",
         "madge": "^3.3.0",
-        "prettier": "^1.16.4",
-        "pretty-quick": "^1.10.0",
         "protractor": "^5.2.0",
         "raw-loader": "^0.5.1",
         "resolve-bin": "^0.4.0",
@@ -137,7 +134,6 @@
         "ts-node": "^3.3.0",
         "tsconfig-paths": "^2.3.0",
         "tslint": "^5.7.0",
-        "tslint-config-prettier": "^1.18.0",
         "tsutils": "^3.0.0",
         "typescript": "^3.1.6",
         "uglify-js": "^3.1.4",
@@ -157,8 +153,7 @@
     },
     "husky": {
         "hooks": {
-            "commit-msg": "node ./tools/git/commit-msg.js -E HUSKY_GIT_PARAMS",
-            "pre-commit": "pretty-quick --staged"
+            "commit-msg": "node ./tools/git/commit-msg.js -E HUSKY_GIT_PARAMS"
         }
     }
 }
