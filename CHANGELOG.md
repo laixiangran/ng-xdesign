@@ -1,3 +1,13 @@
+<a name="7.2.16"></a>
+## [7.2.16](https://github.com/laixiangran/ng-xdesign/compare/7.2.14...7.2.16) (2019-04-12)
+
+
+### Features
+
+* fjasbfhjasgfhj ([648571e](https://github.com/laixiangran/ng-xdesign/commit/648571e))
+
+
+
 <a name="7.2.15"></a>
 ## [7.2.15](https://github.com/laixiangran/ng-xdesign/compare/7.2.14...7.2.15) (2019-04-12)
 
