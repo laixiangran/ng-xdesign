@@ -77,7 +77,7 @@ task('github-release', (done: any) => {
     conventionalGithubReleaser({
         type: 'oauth',
         token: 'process.env.CONVENTIONAL_GITHUB_RELEASER_TOKEN',
-        url: 'https://github.com'
+        url: 'https://github.com/'
     }, {
         preset: 'angular'
     }, done);
