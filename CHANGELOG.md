@@ -1,3 +1,23 @@
+<a name="7.2.11"></a>
+## [7.2.11](https://github.com/laixiangran/ng-xdesign/compare/7.2.9...7.2.11) (2019-04-12)
+
+
+
+<a name="7.2.10"></a>
+## [7.2.10](https://github.com/laixiangran/ng-xdesign/compare/7.2.9...7.2.10) (2019-04-12)
+
+
+
+<a name="7.2.7"></a>
+## [7.2.7](https://github.com/laixiangran/ng-xdesign/compare/v7.2.6...v7.2.7) (2019-04-12)
+
+
+### Features
+
+* test ([c03f811](https://github.com/laixiangran/ng-xdesign/commit/c03f811))
+
+
+
 ## [7.2.6](https://github.com/laixiangran/ng-xdesign/compare/7.2.5...v7.2.6) (2019-04-12)
 
 

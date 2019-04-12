@@ -12,7 +12,7 @@ const conventionalGithubReleaser = require('conventional-github-releaser');
 
 const yargs = require('yargs');
 
-const branch = 'develop';
+const branch = 'master';
 
 task('commit', sequenceTask(
     'lint',
@@ -24,6 +24,15 @@ task('commit', sequenceTask(
     // 'push-changes'
     // 'create-new-tag',
     // 'github-release'
+));
+
+task('relase', sequenceTask(
+    'bump-version',
+    'changelog',
+    'commit-changes',
+    'push-changes',
+    'create-new-tag',
+    'github-release'
 ));
 
 task('bump-version', () => {
@@ -75,7 +84,8 @@ task('create-new-tag', (cb: any) => {
 task('github-release', (done: any) => {
     conventionalGithubReleaser({
         type: 'oauth',
-        token: process.env.CONVENTIONAL_GITHUB_RELEASER_TOKEN
+        token: 'process.env.CONVENTIONAL_GITHUB_RELEASER_TOKEN',
+        url: 'https://github.com'
     }, {
         preset: 'angular'
     }, done);
