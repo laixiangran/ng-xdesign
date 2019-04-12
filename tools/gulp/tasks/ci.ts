@@ -21,7 +21,7 @@ task(
         // 'test:once',
         // 'build',
         // 'bump-version',
-        "changelog",
+        // 'changelog',
         "commit-changes",
         "push-changes"
     )
