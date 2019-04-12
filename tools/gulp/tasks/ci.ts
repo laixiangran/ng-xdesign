@@ -20,7 +20,7 @@ task(
         // 'lint',
         // 'test:once',
         // 'build',
-        "bump-version",
+        // 'bump-version',
         "changelog",
         "commit-changes",
         "push-changes"
@@ -69,7 +69,7 @@ task("commit-changes", () => {
     const commitMsg = yargs.argv.m;
     return src(".")
         .pipe(git.add())
-        .pipe(git.commit(commitMsg || "【Prerelease】Bumped version number"));
+        .pipe(git.commit(commitMsg));
 });
 
 task("push-changes", (cb: any) => {
