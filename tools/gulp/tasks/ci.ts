@@ -21,7 +21,7 @@ task('commit', sequenceTask(
     'bump-version',
     'changelog',
     'commit-changes',
-    'push-changes'
+    // 'push-changes'
     // 'create-new-tag',
     // 'github-release'
 ));
