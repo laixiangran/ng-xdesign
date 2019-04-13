@@ -22,30 +22,12 @@ task('commit', sequenceTask(
 ));
 
 task('relase', sequenceTask(
-    'checkout-master',
-    'merge-develop',
     'lint',
     'bump-version',
     'changelog',
     'release-commit-changes',
     'create-new-tag'
 ));
-
-task('checkout-master', () => {
-    git.checkout('master', function (error: any) {
-        if (error) {
-            throw error;
-        }
-    });
-});
-
-task('merge-develop', () => {
-    git.merge('develop', function (error: any) {
-        if (error) {
-            throw error;
-        }
-    });
-});
 
 task('bump-version', () => {
     let bumpType = 'patch';

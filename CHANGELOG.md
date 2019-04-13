@@ -1,3 +1,21 @@
+<a name="7.2.22"></a>
+## [7.2.22](https://github.com/laixiangran/ng-xdesign/compare/7.2.20...7.2.22) (2019-04-13)
+
+
+### Bug Fixes
+
+* 777777777 ([2c065eb](https://github.com/laixiangran/ng-xdesign/commit/2c065eb))
+* dsadsa ([f48ad84](https://github.com/laixiangran/ng-xdesign/commit/f48ad84))
+* gjhdsahas ([c12a123](https://github.com/laixiangran/ng-xdesign/commit/c12a123))
+* xxxxx ([18282bf](https://github.com/laixiangran/ng-xdesign/commit/18282bf))
+
+
+### Features
+
+* **travis:** add develop ([8060d35](https://github.com/laixiangran/ng-xdesign/commit/8060d35))
+
+
+
 <a name="7.2.18"></a>
 ## [7.2.18](https://github.com/laixiangran/ng-xdesign/compare/7.2.20...7.2.18) (2019-04-13)
 
