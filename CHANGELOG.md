@@ -4,7 +4,7 @@
 
 ### Bug Fixes
 
-* 8888888 ([013335c](https://github.com/laixiangran/ng-xdesign/commit/013335c))
+* 888888888 ([013335c](https://github.com/laixiangran/ng-xdesign/commit/013335c))
 
 
 
