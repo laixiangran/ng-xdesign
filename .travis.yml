@@ -7,7 +7,6 @@ node_js:
 git:
   depth: 3
 branches:
-  - develop
   - master
 install:
   - npm install
