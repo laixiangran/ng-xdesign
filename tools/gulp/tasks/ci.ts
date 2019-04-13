@@ -18,8 +18,7 @@ task('commit', sequenceTask(
     // 'lint',
     // 'test:once',
     // 'build',
-    'bump-version',
-    'changelog'
+    'commit-changes'
 ));
 
 task('relase', sequenceTask(
@@ -35,6 +34,8 @@ task('bump-version', () => {
     }
     else if (yargs.argv.minor) {
         bumpType = 'minor';
+    } else if (yargs.argv.prerelease) {
+        bumpType = 'prerelease';
     }
 
     return src('./package.json')
@@ -64,7 +65,8 @@ task('push-changes', (cb: any) => {
 });
 
 task('create-new-tag', (cb: any) => {
-    const version = require(join(config.projectPath, 'package.json')).version;
+    let version = require(join(config.projectPath, 'package.json')).version;
+    version = '7.2.19';
     git.tag(version, 'Created Tag for version: ' + version, (error: any) => {
         if (error) {
             cb(error);
