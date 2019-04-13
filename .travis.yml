@@ -7,8 +7,8 @@ node_js:
 git:
   depth: 3
 branches:
-  only:
-    - master
+  - develop
+  - master
 install:
   - npm install
 script:
@@ -29,4 +29,3 @@ deploy:
   on:
     branches:
       - master
-      - /^v\d+(\.\d+)+$/
