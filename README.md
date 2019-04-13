@@ -1,8 +1,6 @@
 # xdesign
 
-[![Build Status](https://travis-ci.org/zxhfighter/measure.svg?branch=master)](https://travis-ci.org/zxhfighter/)
-
-Examples can be see here : https://zxhfighter.github.io/measure/.
+[![Build Status](https://travis-ci.com/laixiangran/ng-xdesign.svg?branch=develop)](https://travis-ci.com/laixiangran/ng-xdesign)
 
 ## start
 
