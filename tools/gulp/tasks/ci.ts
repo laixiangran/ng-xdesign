@@ -27,7 +27,7 @@ task('relase', sequenceTask(
     'lint',
     'bump-version',
     'changelog',
-    'commit-changes',
+    'release-commit-changes',
     'create-new-tag'
 ));
 
@@ -79,6 +79,13 @@ task('commit-changes', () => {
     return src('.')
         .pipe(git.add())
         .pipe(git.commit(commitMsg || '【Prerelease】Bumped version number'));
+});
+
+task('release-commit-changes', () => {
+    const version = require(join(config.projectPath, 'package.json')).version;
+    return src('.')
+        .pipe(git.add())
+        .pipe(git.commit(`chore(release): ${version}`));
 });
 
 task('push-changes', (cb: any) => {
