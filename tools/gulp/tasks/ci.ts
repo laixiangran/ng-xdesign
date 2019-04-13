@@ -12,19 +12,40 @@ const conventionalGithubReleaser = require('conventional-github-releaser');
 
 const yargs = require('yargs');
 
-const branch = 'master';
+const masterBranch = 'master';
+const developBranch = 'develop';
 
 task('commit', sequenceTask(
-    // 'lint',
-    // 'test:once',
-    // 'build',
-    'commit-changes'
+    'lint',
+    'commit-changes',
+    'push-changes'
 ));
 
 task('relase', sequenceTask(
-    'create-new-tag',
-    'github-release'
+    'checkout-master',
+    'merge-develop',
+    'lint',
+    'bump-version',
+    'changelog',
+    'commit-changes',
+    'create-new-tag'
 ));
+
+task('checkout-master', () => {
+    git.checkout('master', function (error: any) {
+        if (error) {
+            throw error;
+        }
+    });
+});
+
+task('merge-develop', () => {
+    git.merge('develop', function (error: any) {
+        if (error) {
+            throw error;
+        }
+    });
+});
 
 task('bump-version', () => {
     let bumpType = 'patch';
@@ -61,17 +82,16 @@ task('commit-changes', () => {
 });
 
 task('push-changes', (cb: any) => {
-    git.push('origin', branch, cb);
+    git.push('origin', developBranch, cb);
 });
 
 task('create-new-tag', (cb: any) => {
-    let version = require(join(config.projectPath, 'package.json')).version;
-    version = '7.2.19';
+    const version = require(join(config.projectPath, 'package.json')).version;
     git.tag(version, 'Created Tag for version: ' + version, (error: any) => {
         if (error) {
             cb(error);
         }
-        git.push('origin', branch, {args: '--tags'}, cb);
+        git.push('origin', masterBranch, {args: '--tags'}, cb);
     });
 });
 
