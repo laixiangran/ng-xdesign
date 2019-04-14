@@ -1,8 +1,6 @@
 # xdesign
 
-[![Build Status](https://travis-ci.com/laixiangran/ng-xdesign.svg)](https://travis-ci.com/laixiangran/ng-xdesign)
-
-[![Coverage Status](https://coveralls.io/repos/github/laixiangran/ng-xdesign/badge.svg)](https://coveralls.io/github/laixiangran/ng-xdesign)
+[![Build Status](https://travis-ci.com/laixiangran/ng-xdesign.svg)](https://travis-ci.com/laixiangran/ng-xdesign) [![Coverage Status](https://coveralls.io/repos/github/laixiangran/ng-xdesign/badge.svg)](https://coveralls.io/github/laixiangran/ng-xdesign)
 
 ## start
 

@@ -61,15 +61,15 @@ module.exports = config => {
         },
 
         // A list of reporters to use. Possible Values are "dots" or "progress"
-        reporters: ['progress', 'coverage'],
+        reporters: ['dots', 'coverage'],
 
-        // Karma coverage reporter setting
+        // Configure code coverage reporter
         coverageReporter: {
-            dir: path.join(__dirname, './coverage'),
             reporters: [
-                // reporters not supporting the `file` property
-                {type: 'html'},
-                {type: 'lcov', subdir: 'lcov'}
+                // generates ./coverage/lcov.info
+                {type:'lcovonly', subdir: '.'},
+                // generates ./coverage/coverage-final.json
+                {type:'json', subdir: '.'},
             ]
         },
 

@@ -15,7 +15,8 @@ script:
   - npm run test-once
   - npm run build
 after_script:
-  - npm run coveralls
+  - istanbul cover ./node_modules/mocha/bin/_mocha --reporter lcovonly -- -R spec
+  - npm run report-coverage
 cache:
   npm: true
   directories:
