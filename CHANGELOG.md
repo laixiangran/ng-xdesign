@@ -1,3 +1,13 @@
+<a name="7.2.25"></a>
+## [7.2.25](https://github.com/laixiangran/ng-xdesign/compare/7.2.24...7.2.25) (2019-04-14)
+
+
+### Features
+
+* dsadsar444 ([0bd9439](https://github.com/laixiangran/ng-xdesign/commit/0bd9439))
+
+
+
 <a name="7.2.24"></a>
 ## [7.2.24](https://github.com/laixiangran/ng-xdesign/compare/7.2.23...7.2.24) (2019-04-14)
 
