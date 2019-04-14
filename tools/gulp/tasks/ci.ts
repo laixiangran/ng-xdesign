@@ -79,7 +79,7 @@ task('create-new-tag', (cb: any) => {
         if (error) {
             cb(error);
         }
-        git.push('origin', masterBranch, {args: '--tags'}, cb);
+        git.push('origin', {args: '--tags'}, cb);
     });
 });
 
