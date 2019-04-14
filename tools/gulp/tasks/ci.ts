@@ -2,6 +2,7 @@ import { task, src, dest } from 'gulp';
 import { sequenceTask } from '../utils/sequence-task';
 import { join } from 'path';
 import { config } from '../utils/config';
+import { execNodeTask } from '../utils/task_helpers';
 
 const bump = require('gulp-bump');
 const gutil = require('gulp-util');
@@ -16,12 +17,12 @@ const masterBranch = 'master';
 const developBranch = 'develop';
 
 task('commit', sequenceTask(
+    'add',
     'commit-changes',
     'push-changes'
 ));
 
 task('relase', sequenceTask(
-    'lint',
     'bump-version',
     'changelog',
     'release-commit-changes',
@@ -55,11 +56,15 @@ task('changelog', () => {
         .pipe(dest('./'));
 });
 
-task('commit-changes', () => {
-    const commitMsg = yargs.argv.m;
+function runGitCzTask() {
+    return execNodeTask('git', ['cz']);
+}
+
+task('commit-changes', runGitCzTask());
+
+task('add', () => {
     return src('.')
-        .pipe(git.add())
-        .pipe(git.commit(commitMsg || '【Prerelease】Bumped version number'));
+        .pipe(git.add());
 });
 
 task('release-commit-changes', () => {
