@@ -1,3 +1,13 @@
+<a name="7.3.4"></a>
+## [7.3.4](https://github.com/laixiangran/ng-xdesign/compare/7.3.3...7.3.4) (2019-04-14)
+
+
+### Bug Fixes
+
+* fasfas ([50d607a](https://github.com/laixiangran/ng-xdesign/commit/50d607a))
+
+
+
 <a name="7.3.3"></a>
 ## [7.3.3](https://github.com/laixiangran/ng-xdesign/compare/7.3.2...7.3.3) (2019-04-14)
 
