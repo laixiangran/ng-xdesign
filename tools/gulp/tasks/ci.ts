@@ -16,7 +16,6 @@ const masterBranch = 'master';
 const developBranch = 'develop';
 
 task('commit', sequenceTask(
-    'lint',
     'commit-changes',
     'push-changes'
 ));
