@@ -1,6 +1,6 @@
 {
     "name": "ng-xdesign-test",
-    "version": "7.3.8",
+    "version": "7.3.9",
     "description": "xdesign - A enterprize angular ui component library",
     "main": "./bundle/xdesign.umd.min.js",
     "sideEffects": false,
