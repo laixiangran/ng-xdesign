@@ -1,3 +1,8 @@
+<a name="7.3.7"></a>
+## [7.3.7](https://github.com/laixiangran/ng-xdesign/compare/7.3.6...7.3.7) (2019-04-14)
+
+
+
 <a name="7.3.6"></a>
 ## [7.3.6](https://github.com/laixiangran/ng-xdesign/compare/7.3.5...7.3.6) (2019-04-14)
 

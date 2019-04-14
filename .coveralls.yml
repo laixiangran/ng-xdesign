@@ -1,9 +1,2 @@
 service_name: travis-ci
-repo_token: VNVrV57hr8O4WHsoA0vNSmUYYqCgPIKlK,
-coverageReporter: {
-    dir: path.join(__dirname, 'coverage'),
-    reporters: [
-        {type: 'html'},
-        {type: 'lcov', subdir: 'lcov'}  // lcov
-    ]
-},
+repo_token: VNVrV57hr8O4WHsoA0vNSmUYYqCgPIKlK

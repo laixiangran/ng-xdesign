@@ -61,13 +61,16 @@ module.exports = config => {
         },
 
         // A list of reporters to use. Possible Values are "dots" or "progress"
-        reporters: ['dots'],
+        reporters: ['progress', 'coverage'],
 
         // Karma coverage reporter setting
         coverageReporter: {
-            type: 'json-summary',
-            dir: 'coverage/',
-            subdir: '.'
+            dir: path.join(__dirname, './coverage'),
+            reporters: [
+                // reporters not supporting the `file` property
+                {type: 'html'},
+                {type: 'lcov', subdir: 'lcov'}
+            ]
         },
 
         // webpack config
