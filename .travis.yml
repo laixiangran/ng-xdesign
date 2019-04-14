@@ -27,7 +27,4 @@ deploy:
     secure: SkqD+Q/dSfgNPitfwTKGb8bVz2NqVwqRRW/lA1i13TKA4RbgomQQhEjeRWITTLo9ANhieasR8G+7Xd9HldzVud+6KxddOAB76dUbZ+vu/11bMUcQ5nN/JJLGTGkOpmpRXqVGP1/PinYaBf6KQDwe9dPFFk9YZP+RoZi8/v60JvjKBg0Qz8DgsJCNX43r4TcEgup0yqeDGbBnjCUVRGFf9ng/EMv/23TjszWpfwyoGjp7etgiVrf+22HZZzl+/Mpbdqq4YdCvXnl7888El6mPHufFaPq/NP7guNMScBq22Lhe7mgQmjD7xJZ/UfeOIi+6M+G7wu3iKsm5pdEwSkyDbFnCIbsDRwmSUjPoXaX+5h1iqHkgGK1+evH3dTHsWTyAXexFKkEpE/GqnqNSfy24m1wbIGuDTSL9u6zF9NCFw4NajPq1Eb8n2kygL5TPm2cYqnRW0JMv+A6sT5zVK2SQYwUEzdRP48eF+ypo4ug5N4ISikoiPj4ndMsQvjXjazKEYxqu8M3CGUvWsc53tLptVRVdHINpRJwgL4Qf532dHRXTbph14yixSeq37b5ew00+1KQPZFrtnZfD5p3WUihYhx19IlCNB6JQ3rpHxd9ads2YY77Ij1EVUNzHKiq+blbzYaTGlYYcYitAOcJrmeSGODIbO2sRGoTIxbe9VpMmwCs=
   skip_cleanup: true
   on:
-    tags: true,
-    branches:
-      only:
-        - master
+    tags: true
