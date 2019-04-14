@@ -3,7 +3,7 @@ sudo: required
 addons:
   chrome: stable
 node_js:
-- '8'
+  - '8'
 git:
   depth: 3
 branches:
@@ -15,11 +15,11 @@ script:
   - npm run test-once
   - npm run build
 after_script:
-    - npm run coveralls
+  - npm run coveralls
 cache:
   npm: true
   directories:
-  - "./node_modules/"
+    - "./node_modules/"
 before_deploy:
   - cd dist/packages
 deploy:
@@ -27,5 +27,7 @@ deploy:
   email: laixiangran@163.com
   api_key:
     secure: XUYXzppJ5gTWHAsIiTMjTAsciMVyAuxsoqduLQ/ty9YhvUtYyaKSGmJVtb7c2+eKXrvD9m6rPWgxKmN+U2UMjzh+dYC/uopM/Yvx3GR7LNlui3feP2tjJkNOeVrh22wLPmVpApq3F+Aw0XLi45fH8dmw241H9wtOF7olB1SEX3NhF7wCglcm2SN4ZawcVKwl5uyh+1lOi0QEStGcqKf8Ri/3c5WpB10eqWRngShYb3c5+wIiC0tlmRS8VJJ47ro69Nh/7qGkrrRMdNu2K1c5+dweXBXoOIoMkCatRgqIKzxCskXVq5Xv/TuPVLa1e49OEwj18EfvrqJvmgKTk6NsPOrLw7ifH03oI5PAU8gqtJqXq9AtVmMtM+HbGyjZ6k4F0YNHd/LABYoqjb9lUPdw3vuspYY0DHAzHmE5m1p6Wvcpfpp43WS2J33I/DCN5QbDNUFGGnuMBG99Kv5oB29/aDa26ia7nrN1WFTAm7StiOp8Jhp7dzCQGimgu7j/2IsYnbtWsN4+1fQNHjZDGPH/lI1tEx9AKMTfE4956yTzlj0DIDM9LBGAnrF1Kfwimlb4AjT0lSFm36ZtBo4VscGPG91jFobbvbEhOSG36EAvYSpMeC8Z4GUnEEOxx728jNSTzIDLm1wJQzQqeShfpQT/k8w+QyUJawSuURj5Fsyxk2w=
+  skip_cleanup: true
   on:
-    branche: master
+    branches:
+      only: master
