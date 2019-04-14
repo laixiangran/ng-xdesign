@@ -16,10 +16,9 @@ const yargs = require('yargs');
 const masterBranch = 'master';
 const developBranch = 'develop';
 
-task('commit', sequenceTask(
-    'add',
-    'commit-changes',
-    'push-changes'
+task('dev-commit', sequenceTask(
+    'dev-commit-changes',
+    'push-dev-changes'
 ));
 
 task('relase', sequenceTask(
@@ -56,15 +55,11 @@ task('changelog', () => {
         .pipe(dest('./'));
 });
 
-function runGitCzTask() {
-    return execNodeTask('git', ['cz']);
-}
-
-task('commit-changes', runGitCzTask());
-
-task('add', () => {
+task('dev-commit-changes', () => {
+    const commitMsg = yargs.argv.m;
     return src('.')
-        .pipe(git.add());
+        .pipe(git.add())
+        .pipe(git.commit(commitMsg || '【Prerelease】Bumped version number'));
 });
 
 task('release-commit-changes', () => {
@@ -74,7 +69,7 @@ task('release-commit-changes', () => {
         .pipe(git.commit(`chore(release): ${version}`));
 });
 
-task('push-changes', (cb: any) => {
+task('push-dev-changes', (cb: any) => {
     git.push('origin', developBranch, cb);
 });
 

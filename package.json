@@ -26,9 +26,8 @@
         "clean": "gulp clean",
         "component": "gulp generate:component",
         "docs": "gulp docs",
-        "commit": "git add . && git cz",
-        "release": "gulp relase",
-        "m": "gulp commit-changes"
+        "commit": "gulp dev-commit",
+        "release": "gulp relase"
     },
     "dependencies": {
         "@angular/animations": "~7.2.0",
