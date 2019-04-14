@@ -1,6 +1,9 @@
 # xdesign
 
-[![Build Status](https://travis-ci.com/laixiangran/ng-xdesign.svg)](https://travis-ci.com/laixiangran/ng-xdesign) [![Coverage Status](https://coveralls.io/repos/github/laixiangran/ng-xdesign/badge.svg)](https://coveralls.io/github/laixiangran/ng-xdesign)
+[![Build Status](https://travis-ci.com/laixiangran/ng-xdesign.svg?branch=develop)](https://travis-ci.com/laixiangran/ng-xdesign)
+[![codecov](https://codecov.io/gh/laixiangran/ng-xdesign/branch/develop/graph/badge.svg)](https://codecov.io/gh/laixiangran/ng-xdesign)
+[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/laixiangran/ng-xdesign/blob/master/LICENSE)
+
 
 ## start
 
