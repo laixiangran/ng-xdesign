@@ -1,6 +1,6 @@
 {
     "name": "ng-xdesign-test",
-    "version": "7.3.9",
+    "version": "7.3.10",
     "description": "xdesign - A enterprize angular ui component library",
     "main": "./bundle/xdesign.umd.min.js",
     "sideEffects": false,
@@ -27,8 +27,7 @@
         "component": "gulp generate:component",
         "docs": "gulp docs",
         "commit": "gulp commit-dev",
-        "release": "gulp relase",
-        "report-coverage": "codecov"
+        "release": "gulp relase"
     },
     "dependencies": {
         "@angular/animations": "~7.2.0",
@@ -76,7 +75,6 @@
         "browser-sync": "^2.18.13",
         "chalk": "^2.2.0",
         "clean-webpack-plugin": "^0.1.19",
-        "codecov": "^3.3.0",
         "codelyzer": "^4.5.0",
         "commitizen": "^3.0.7",
         "conventional-github-releaser": "^2.0.0",

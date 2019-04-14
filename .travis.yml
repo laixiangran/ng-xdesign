@@ -10,13 +10,14 @@ branches:
   - develop
   - master
 install:
+  - npm install -g codecov
   - npm install
 script:
   - npm run test-once
   - npm run build
 after_script:
   - istanbul cover ./node_modules/mocha/bin/_mocha --reporter lcovonly -- -R spec
-  - npm run report-coverage
+  - codecov
 cache:
   npm: true
   directories:
