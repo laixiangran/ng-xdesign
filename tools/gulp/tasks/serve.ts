@@ -91,6 +91,6 @@ task('build:demo:webpack', (cb?: Function) => {
 task('build:replace:basehref', () => {
     const docsIndex = join(config.appPath, '../docs/index.html');
     let indexContent = readFileSync(docsIndex, 'utf-8');
-    indexContent = indexContent.replace('base href="/"', 'base href="/measure/"');
+    indexContent = indexContent.replace('base href="/"', 'base href="/"');
     writeFileSync(docsIndex, indexContent, 'utf-8');
 });
