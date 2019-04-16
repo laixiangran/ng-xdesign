@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.com/laixiangran/ng-xdesign.svg?branch=develop)](https://travis-ci.com/laixiangran/ng-xdesign)
 [![codecov](https://codecov.io/gh/laixiangran/ng-xdesign/branch/develop/graph/badge.svg)](https://codecov.io/gh/laixiangran/ng-xdesign)
 [![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/laixiangran/ng-xdesign/blob/master/LICENSE)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ba3fc6fe-ba30-441a-8860-47e005c59066/deploy-status)](https://app.netlify.com/sites/thirsty-leakey-6d3c7a/deploys)
 
 
 ## start
