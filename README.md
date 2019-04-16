@@ -1,4 +1,4 @@
-# xdesign
+# ng-xdesign
 
 [![Build Status](https://travis-ci.com/laixiangran/ng-xdesign.svg?branch=develop)](https://travis-ci.com/laixiangran/ng-xdesign)
 [![codecov](https://codecov.io/gh/laixiangran/ng-xdesign/branch/develop/graph/badge.svg)](https://codecov.io/gh/laixiangran/ng-xdesign)
