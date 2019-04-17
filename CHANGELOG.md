@@ -1,3 +1,14 @@
+<a name="7.2.3"></a>
+## [7.2.3](https://github.com/laixiangran/ng-xdesign/compare/7.2.2...7.2.3) (2019-04-17)
+
+
+### Features
+
+* **i18n:** add [@ngx-translate](https://github.com/ngx-translate)/core ([3a3758e](https://github.com/laixiangran/ng-xdesign/commit/3a3758e))
+* **i18n:** add nbI18n pipe ([cfac401](https://github.com/laixiangran/ng-xdesign/commit/cfac401))
+
+
+
 <a name="7.2.2"></a>
 ## [7.2.2](https://github.com/laixiangran/ng-xdesign/compare/7.2.1...7.2.2) (2019-04-16)
 
