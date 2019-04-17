@@ -2,7 +2,6 @@ import { task, src, dest } from 'gulp';
 import { sequenceTask } from '../utils/sequence-task';
 import { join } from 'path';
 import { config } from '../utils/config';
-import { execNodeTask } from '../utils/task_helpers';
 
 const bump = require('gulp-bump');
 const gutil = require('gulp-util');
@@ -25,7 +24,8 @@ task('relase', sequenceTask(
     'bump-version',
     'changelog',
     'release-commit-changes',
-    'create-new-tag'
+    'create-new-tag',
+    'github-release'
 ));
 
 task('bump-version', () => {
@@ -86,7 +86,7 @@ task('create-new-tag', (cb: any) => {
 task('github-release', (done: any) => {
     conventionalGithubReleaser({
         type: 'oauth',
-        token: 'process.env.CONVENTIONAL_GITHUB_RELEASER_TOKEN'
+        token: 'bddb05e20a9db1e6a2e195a42ff9d50a1f56df12'
     }, {
         preset: 'angular'
     }, done);
