@@ -4,9 +4,6 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import localeZh from '@angular/common/locales/zh-Hans';
-
-registerLocaleData(localeZh);
 
 import {
     ButtonModule,
@@ -204,8 +201,7 @@ const demoModules = [
     ],
     providers: [
         ToastService,
-        DialogService,
-        { provide: LOCALE_ID, useValue: 'zh-Hans' }
+        DialogService
     ],
     bootstrap: [AppComponent]
 })

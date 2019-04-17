@@ -1,7 +1,7 @@
 import { Inject, Injectable, LOCALE_ID } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
-import { en_US, zh_Hans } from './languages';
+import { en_US, zh_Hans, zh_Hant } from './languages';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +22,7 @@ export class I18nService {
   setTranslations() {
     this.translate.setTranslation('en-US', en_US);
     this.translate.setTranslation('zh-Hans', zh_Hans);
+    this.translate.setTranslation('zh-Hant', zh_Hant);
   }
 
   setLocaleId(localeId: string): void {
@@ -33,7 +34,11 @@ export class I18nService {
     this._change.next(localeId);
   }
 
-  getLocaleId(): string {
+  getCurrentLocaleId(): string {
     return this._localeId;
+  }
+
+  getLocaleIds(): string[] {
+    return this.translate.getLangs();
   }
 }

@@ -1,16 +1,14 @@
-<h1>日期</h1>
-<p>
-    {{ now | date }}
-</p>
-<h1>货币</h1>
-<p>
-    {{ 0.259 | currency }}
-</p>
-<h1>数字</h1>
-<p>
-    {{ 3.14 | number }}
-</p>
-<h1>百分比</h1>
-<p>
-    {{ 0.259 | percent }}
-</p>
+<div>
+    <label>
+        {{ 'global.title' | translate }}
+        <select #localeIdSelect (change)="setLocaleId(localeIdSelect.value)">
+            <option *ngFor="let localeId of localeIds" [value]="localeId"
+                [selected]="localeId === currentLocaleId">{{ localeId }}</option>
+        </select>
+    </label>
+</div>
+<br>
+<div>
+    <h2>{{ 'global.text' | translate }}</h2>
+    {{ 'global.date' | translate }}：{{ now | nbDate: currentLocaleId }}
+</div>
