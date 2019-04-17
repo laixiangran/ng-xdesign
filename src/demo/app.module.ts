@@ -1,9 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { CommonModule, registerLocaleData } from '@angular/common';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import localeZh from '@angular/common/locales/zh-Hans';
+
+registerLocaleData(localeZh);
 
 import {
     ButtonModule,
@@ -45,7 +48,8 @@ import {
     TableTransferModule,
     FormModule,
     GridModule,
-    RatingModule
+    RatingModule,
+    I18nModule
 } from '../component';
 
 import { AppComponent } from './app.component';
@@ -95,7 +99,7 @@ import { FormDemoModule } from './form';
 import { ScheduleDemoModule } from './schedule';
 import { GridDemoModule } from './grid';
 import { RatingDemoModule } from './rating';
-
+import { I18nComponentDemo } from './i18n';
 
 const demoModules = [
     InputDemoModule,
@@ -145,7 +149,8 @@ const demoModules = [
         OverlayDemo,
         GuideComponentDemo,
         IconsComponentDemo,
-        TypographyDemo
+        TypographyDemo,
+        I18nComponentDemo
     ],
     imports: [
         BrowserModule,
@@ -153,7 +158,7 @@ const demoModules = [
         BrowserAnimationsModule,
         FormsModule,
         ReactiveFormsModule,
-        ButtonModule.forRoot(),
+        ButtonModule,
         BreadcrumbModule,
         SwitchModule,
         ButtonGroupModule,
@@ -191,12 +196,17 @@ const demoModules = [
         FormModule,
         GridModule,
         RatingModule,
+        I18nModule,
 
         // demos
         ...demoModules,
         RouterModule.forRoot(appRoutes, { useHash: true })
     ],
-    providers: [ToastService, DialogService],
+    providers: [
+        ToastService,
+        DialogService,
+        { provide: LOCALE_ID, useValue: 'zh-Hans' }
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

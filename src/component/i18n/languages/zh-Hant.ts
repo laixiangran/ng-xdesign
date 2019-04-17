@@ -1,14 +1,7 @@
-import Calendar from './calendar/zh_TW';
-import DatePicker from './date-picker/zh_TW';
-import Pagination from './pagination/zh_TW';
-import TimePicker from './time-picker/zh_TW';
-
 export default {
-  locale: 'zh-tw',
-  Pagination,
-  DatePicker,
-  TimePicker,
-  Calendar,
+  global: {
+    placeholder: '請選擇',
+  },
   Table: {
     filterTitle: '篩選器',
     filterConfirm: '確 定',

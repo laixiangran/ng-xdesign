@@ -1,15 +1,4 @@
-import Calendar from './calendar/zh_CN';
-import DatePicker from './date-picker/zh_CN';
-import Pagination from './pagination/zh_CN';
-import TimePicker from './time-picker/zh_CN';
-
 export default {
-  locale: 'zh-cn',
-  Pagination,
-  DatePicker,
-  TimePicker,
-  Calendar,
-  // locales for all comoponents
   global: {
     placeholder: '请选择',
   },

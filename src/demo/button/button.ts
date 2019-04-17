@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { ButtonConfig } from '../../component/button';
 export function getButtonConfig(): ButtonConfig {
@@ -11,7 +11,7 @@ export function getButtonConfig(): ButtonConfig {
     styleUrls: ['./button.less'],
     providers: [{ provide: ButtonConfig, useFactory: getButtonConfig }]
 })
-export class ButtonDemo implements AfterViewInit {
+export class ButtonDemo {
 
     // theme sources
     tsCode: string = require('!!raw-loader!./themes/button-theme.ts');
@@ -32,8 +32,4 @@ export class ButtonDemo implements AfterViewInit {
     tsCodeIcon: string = require('!!raw-loader!./icon/button-icon.ts');
     htmlCodeIcon: string = require('!!raw-loader!./icon/button-icon.html');
     lessCodeIcon: string = require('!!raw-loader!./icon/button-icon.less');
-
-    ngAfterViewInit() {
-        console.log(this.tsCode);
-    }
 }

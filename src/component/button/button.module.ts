@@ -1,7 +1,6 @@
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent, ButtonAnchorComponent } from './button';
-import { ButtonConfig } from './button.config';
 
 const components = [
     ButtonComponent,
@@ -11,11 +10,7 @@ const components = [
 @NgModule({
     imports: [CommonModule],
     declarations: [...components],
-    exports: [...components],
-    providers: [ButtonConfig]
+    exports: [...components]
 })
 export class ButtonModule {
-    static forRoot(): ModuleWithProviders {
-        return { ngModule: ButtonModule, providers: [ButtonConfig] };
-    }
 }

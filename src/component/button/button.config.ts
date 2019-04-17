@@ -3,7 +3,9 @@ import { Injectable } from '@angular/core';
 /**
  * button default config
  */
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class ButtonConfig {
 
     /**

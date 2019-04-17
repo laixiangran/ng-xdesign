@@ -1,14 +1,4 @@
-import Calendar from './calendar/en_US';
-import DatePicker from './date-picker/en_US';
-import Pagination from './pagination/en_US';
-import TimePicker from './time-picker/en_US';
-
 export default {
-  locale: 'en',
-  Pagination,
-  DatePicker,
-  TimePicker,
-  Calendar,
   global: {
     placeholder: 'Please select',
   },
