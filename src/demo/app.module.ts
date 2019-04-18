@@ -161,7 +161,7 @@ const demoModules = [
         BrowserAnimationsModule,
         FormsModule,
         ReactiveFormsModule,
-        ButtonModule,
+        ButtonModule.forRoot(),
         BreadcrumbModule,
         SwitchModule,
         ButtonGroupModule,

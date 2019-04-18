@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent, ButtonAnchorComponent } from './button';
-import { I18nModule } from '../i18n';
+import { ButtonConfig } from './button.config';
 
 const components = [
     ButtonComponent,
@@ -9,11 +9,13 @@ const components = [
 ];
 
 @NgModule({
-    imports: [CommonModule, I18nModule],
+    imports: [CommonModule],
     declarations: [...components],
-    exports: [...components]
+    exports: [...components],
+    providers: [ButtonConfig]
 })
 export class ButtonModule {
-    constructor() {
+    static forRoot(): ModuleWithProviders {
+        return { ngModule: ButtonModule, providers: [ButtonConfig] };
     }
 }
