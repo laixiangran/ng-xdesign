@@ -4,6 +4,11 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import localeZhHans from '@angular/common/locales/zh-Hans';
+import localeZhHant from '@angular/common/locales/zh-Hant';
+
+registerLocaleData(localeZhHans);
+registerLocaleData(localeZhHant);
 
 import {
     ButtonModule,
@@ -97,6 +102,7 @@ import { ScheduleDemoModule } from './schedule';
 import { GridDemoModule } from './grid';
 import { RatingDemoModule } from './rating';
 import { I18nComponentDemo } from './i18n';
+import { TranslateModule } from '@ngx-translate/core';
 
 const demoModules = [
     InputDemoModule,
@@ -197,7 +203,8 @@ const demoModules = [
 
         // demos
         ...demoModules,
-        RouterModule.forRoot(appRoutes, { useHash: true })
+        RouterModule.forRoot(appRoutes, { useHash: true }),
+        TranslateModule.forRoot()
     ],
     providers: [
         ToastService,

@@ -1,24 +1,20 @@
 import { NgModule } from '@angular/core';
-import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
 import { NbDatePipe } from './i18n.pipe';
-import localeZhhans from '@angular/common/locales/zh-Hans';
-import localeZhHant from '@angular/common/locales/zh-Hant';
-import { registerLocaleData } from '@angular/common';
-
-registerLocaleData(localeZhhans);
-registerLocaleData(localeZhHant);
+import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
+import { I18nService } from './i18n.service';
 
 @NgModule({
     imports: [
-        TranslateModule.forRoot()
+        TranslateModule.forChild()
     ],
     declarations: [
         NbDatePipe
     ],
     exports: [
-        TranslatePipe,
-        NbDatePipe
-    ]
+        NbDatePipe,
+        TranslatePipe
+    ],
+    providers: [ I18nService ]
 })
 export class I18nModule {
 }
