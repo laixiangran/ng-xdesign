@@ -5,7 +5,7 @@ import { I18nService } from './i18n.service';
 
 @NgModule({
     imports: [
-        TranslateModule.forChild()
+        TranslateModule
     ],
     declarations: [
         NbDatePipe
