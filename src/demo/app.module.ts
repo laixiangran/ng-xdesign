@@ -208,7 +208,8 @@ const demoModules = [
     ],
     providers: [
         ToastService,
-        DialogService
+        DialogService,
+        { provide: LOCALE_ID, useValue: 'zh-Hans' }
     ],
     bootstrap: [AppComponent]
 })

@@ -13,8 +13,8 @@ import { I18nService } from './i18n.service';
     exports: [
         NbDatePipe,
         TranslatePipe
-    ],
-    providers: [ I18nService ]
+    ]
 })
 export class I18nModule {
+    constructor(private i18nService: I18nService) {}
 }

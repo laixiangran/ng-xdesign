@@ -1,9 +1,11 @@
-import { Inject, Injectable, LOCALE_ID } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import { en_US, zh_Hans, zh_Hant } from './languages';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class I18nService {
   private _localeId: string;
   private _change = new BehaviorSubject<string>(this._localeId);
@@ -12,10 +14,10 @@ export class I18nService {
     return this._change.asObservable();
   }
 
-  constructor(@Inject(LOCALE_ID) localeId: string, private translate: TranslateService) {
-    console.log('localeId: ', localeId);
+  constructor(private translate: TranslateService) {
+    console.log('translate: ');
     this.setTranslations();
-    this.setLocaleId(localeId || 'zh-Hans');
+    this.setLocaleId('zh-Hans');
   }
 
   setTranslations() {
