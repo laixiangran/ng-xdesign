@@ -20,7 +20,7 @@ task('commit-dev', sequenceTask(
     'push-dev-changes'
 ));
 
-task('relase', sequenceTask(
+task('release', sequenceTask(
     'bump-version',
     'changelog',
     'release-commit-changes',
