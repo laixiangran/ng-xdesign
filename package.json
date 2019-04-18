@@ -27,7 +27,7 @@
         "component": "gulp generate:component",
         "docs": "gulp docs",
         "commit": "gulp commit-dev",
-        "release": "gulp relase"
+        "release": "gulp release"
     },
     "dependencies": {
         "@angular/animations": "~7.2.0",
