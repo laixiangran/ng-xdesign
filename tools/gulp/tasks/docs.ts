@@ -3,8 +3,6 @@ import { Dgeni } from 'dgeni';
 import { sequenceTask } from '../utils/sequence-task';
 
 const markdown = require('gulp-markdown');
-const highlight = require('gulp-highlight-files');
-const transform = require('gulp-transform');
 const hljs = require('highlight.js');
 const dom = require('gulp-dom');
 
