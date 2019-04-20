@@ -1,3 +1,14 @@
+<a name="7.2.6"></a>
+## [7.2.6](https://github.com/laixiangran/ng-xdesign/compare/7.2.5...7.2.6) (2019-04-20)
+
+
+### Bug Fixes
+
+* **ci:** remove github token ([29a4d9f](https://github.com/laixiangran/ng-xdesign/commit/29a4d9f))
+* **docs:** fix docs error ([166162e](https://github.com/laixiangran/ng-xdesign/commit/166162e))
+
+
+
 <a name="7.2.5"></a>
 ## [7.2.5](https://github.com/laixiangran/ng-xdesign/compare/7.2.4...7.2.5) (2019-04-20)
 
