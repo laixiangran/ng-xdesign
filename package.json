@@ -15,19 +15,18 @@
     "scripts": {
         "start": "npm run dev",
         "dev": "cross-env NODE_ENV=development gulp serve",
+        "commit": "gulp commit-dev",
+        "release": "gulp release",
         "test": "gulp test",
         "test-once": "gulp test:once",
         "watch:test": "npm run test -- --auto-watch --no-single-run",
         "rm": "rm -rf aot && rm -rf dist",
         "build": "gulp build",
-        "build:demo": "node --max-old-space-size=8192 ./node_modules/.bin/gulp build:demo",
         "lint": "gulp lint",
         "e2e": "gulp e2e",
         "clean": "gulp clean",
         "component": "gulp generate:component",
-        "docs": "gulp docs",
-        "commit": "gulp commit-dev",
-        "release": "gulp release"
+        "docs": "gulp docs"
     },
     "dependencies": {
         "@angular/animations": "~7.2.0",

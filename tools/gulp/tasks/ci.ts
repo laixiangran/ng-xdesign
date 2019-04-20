@@ -21,6 +21,7 @@ task('commit-dev', sequenceTask(
 ));
 
 task('release', sequenceTask(
+    'build:demo',
     'bump-version',
     'changelog',
     'release-commit-changes',

@@ -22,7 +22,7 @@ const config = {
         'browserName': 'chrome',
         'version': 'latest',
         'chromedriverVersion': '2.28',
-        'name': 'measure E2E Tests',
+        'name': 'ng-xdesign E2E Tests',
         // Enables concurrent testing in the Webdriver. Currently runs five e2e files in parallel.
         'maxInstances': 5,
         'shardTestFiles': true
