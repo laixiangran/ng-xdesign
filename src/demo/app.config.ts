@@ -46,4 +46,16 @@ export const routerList = [{
     'routerLinkActive': 'active',
     'class': 'list-item',
     'currentRouter': false
+}, {
+    'text': 'Button',
+    'routerLink': '',
+    'routerLinkActive': '',
+    'class': 'list-item list-item-desc',
+    'currentRouter': false
+}, {
+    'text': 'button',
+    'routerLink': '/components/button',
+    'routerLinkActive': 'active',
+    'class': 'list-item',
+    'currentRouter': false
 }];

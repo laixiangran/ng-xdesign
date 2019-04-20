@@ -8,6 +8,7 @@ import localeZhHans from '@angular/common/locales/zh-Hans';
 import localeZhHant from '@angular/common/locales/zh-Hant';
 
 import {
+    ButtonModule,
     I18nModule
 } from '../component';
 
@@ -19,6 +20,7 @@ import { IconsComponentDemo } from './icons';
 import { TypographyDemo } from './typography';
 import { I18nComponentDemo } from './i18n';
 import { TranslateModule } from '@ngx-translate/core';
+import { ButtonDemoModule } from './button';
 
 registerLocaleData(localeZhHans);
 registerLocaleData(localeZhHant);
@@ -37,9 +39,11 @@ registerLocaleData(localeZhHant);
         BrowserAnimationsModule,
         FormsModule,
         ReactiveFormsModule,
+        ButtonModule.forRoot(),
         I18nModule,
         RouterModule.forRoot(appRoutes, { useHash: true }),
-        TranslateModule.forRoot()
+        TranslateModule.forRoot(),
+        ButtonDemoModule
     ],
     providers: [
         { provide: LOCALE_ID, useValue: 'zh-Hans' }

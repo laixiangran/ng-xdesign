@@ -34,7 +34,7 @@ module.exports = config => {
         ],
 
         // Used to resolve all relative paths defined in files and exclude
-        basePath: path.join(__dirname, '../'),
+        basePath: path.join(__dirname, './'),
 
         // Run many times
         singleRun: false,
@@ -74,7 +74,7 @@ module.exports = config => {
         },
 
         // webpack config
-        webpack: require('./webpack.test')(),
+        webpack: require('./config/webpack.test')(),
 
         // webpack-dev-middleware configuration
         webpackMiddleware: {
