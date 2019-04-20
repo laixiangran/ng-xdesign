@@ -1,6 +1,6 @@
 {
     "name": "ng-xdesign-test",
-    "version": "7.2.7",
+    "version": "7.2.8",
     "description": "xdesign - A enterprize angular ui component library",
     "main": "./bundle/xdesign.umd.min.js",
     "sideEffects": false,
@@ -15,8 +15,9 @@
     "scripts": {
         "start": "npm run dev",
         "dev": "cross-env NODE_ENV=development gulp serve",
-        "commit": "gulp commit-dev",
-        "release": "gulp release",
+        "commit": "gulp commit",
+        "release": "gulp release && npm run github-release",
+        "github-release": "gulp github-release",
         "test": "gulp test",
         "test-once": "gulp test:once",
         "watch:test": "npm run test -- --auto-watch --no-single-run",

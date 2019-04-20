@@ -12,21 +12,17 @@ const conventionalGithubReleaser = require('conventional-github-releaser');
 
 const yargs = require('yargs');
 
-const masterBranch = 'master';
-const developBranch = 'develop';
-
-task('commit-dev', sequenceTask(
-    'commit-dev-changes',
-    'push-dev-changes'
+task('commit', sequenceTask(
+    'commit-changes',
+    'push-changes'
 ));
 
 task('release', sequenceTask(
     'build:demo',
     'bump-version',
     'changelog',
-    'release-commit-changes',
-    'create-new-tag',
-    'github-release'
+    'commit-changes',
+    'create-new-tag'
 ));
 
 task('bump-version', () => {
@@ -56,22 +52,16 @@ task('changelog', () => {
         .pipe(dest('./'));
 });
 
-task('commit-dev-changes', () => {
+task('commit-changes', () => {
     const commitMsg = yargs.argv.m;
-    return src('.')
-        .pipe(git.add())
-        .pipe(git.commit(commitMsg || '【Prerelease】Bumped version number'));
-});
-
-task('push-dev-changes', (cb: any) => {
-    git.push('origin', developBranch, cb);
-});
-
-task('release-commit-changes', () => {
     const version = require(join(config.projectPath, 'package.json')).version;
     return src('.')
         .pipe(git.add())
-        .pipe(git.commit(`chore(release): ${version}`));
+        .pipe(git.commit(commitMsg || `chore(release): ${version}`));
+});
+
+task('push-changes', (cb: any) => {
+    git.push('origin', cb);
 });
 
 task('create-new-tag', (cb: any) => {
