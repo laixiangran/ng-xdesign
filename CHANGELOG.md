@@ -1,3 +1,23 @@
+<a name="7.2.5"></a>
+## [7.2.5](https://github.com/laixiangran/ng-xdesign/compare/7.2.4...7.2.5) (2019-04-20)
+
+
+### Bug Fixes
+
+* **i18n:** build failed ([5bbf21f](https://github.com/laixiangran/ng-xdesign/commit/5bbf21f))
+* **i18n:** build failed ([a5f454b](https://github.com/laixiangran/ng-xdesign/commit/a5f454b))
+* **i18n:** fix some error ([4afa668](https://github.com/laixiangran/ng-xdesign/commit/4afa668))
+* **i18n:** not supported in decorators ([0d8ca18](https://github.com/laixiangran/ng-xdesign/commit/0d8ca18)), closes [#1](https://github.com/laixiangran/ng-xdesign/issues/1)
+
+
+### Features
+
+* update cataloguing ([579e445](https://github.com/laixiangran/ng-xdesign/commit/579e445))
+* update cataloguing ([9b8a01e](https://github.com/laixiangran/ng-xdesign/commit/9b8a01e))
+* **ci:** update github token ([9a735fe](https://github.com/laixiangran/ng-xdesign/commit/9a735fe))
+
+
+
 <a name="7.2.4"></a>
 ## [7.2.4](https://github.com/laixiangran/ng-xdesign/compare/7.2.3...7.2.4) (2019-04-18)
 
