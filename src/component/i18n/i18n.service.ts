@@ -15,7 +15,6 @@ export class I18nService {
   }
 
   constructor(private translate: TranslateService) {
-    console.log('translate: ');
     this.setTranslations();
     this.setLocaleId('zh-Hans');
   }
