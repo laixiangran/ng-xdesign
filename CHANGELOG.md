@@ -1,3 +1,13 @@
+<a name="7.2.9"></a>
+## [7.2.9](https://github.com/laixiangran/ng-xdesign/compare/7.2.8...7.2.9) (2019-04-24)
+
+
+### Features
+
+* **i18n:** add NB_I18N and NbI18nInterface ([7b572f8](https://github.com/laixiangran/ng-xdesign/commit/7b572f8))
+
+
+
 <a name="7.2.8"></a>
 ## [7.2.8](https://github.com/laixiangran/ng-xdesign/compare/7.2.7...7.2.8) (2019-04-20)
 
