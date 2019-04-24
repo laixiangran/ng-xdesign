@@ -1,7 +1,9 @@
 export default {
+  localeId: 'zh-Hans',
   global: {
-    title: '请选择语言',
-    text: '国际化的xdesign！',
-    date: '日期'
-  }
+    placeholder: '请选择',
+  },
+  empty: {
+    description: '暂无数据',
+  },
 };

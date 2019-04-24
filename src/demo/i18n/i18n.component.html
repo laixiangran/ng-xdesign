@@ -1,6 +1,6 @@
 <div>
     <label>
-        {{ 'global.title' | translate }}
+        {{ locale.global.placeholder }}
         <select #localeIdSelect (change)="setLocaleId(localeIdSelect.value)">
             <option *ngFor="let localeId of localeIds" [value]="localeId"
                 [selected]="localeId === currentLocaleId">{{ localeId }}</option>
@@ -9,6 +9,8 @@
 </div>
 <br>
 <div>
-    <h2>{{ 'global.text' | translate }}</h2>
-    {{ 'global.date' | translate }}：{{ now | nbDate: currentLocaleId }}
+    {{ now | nbDate: currentLocaleId }}
+</div>
+<div>
+    {{ locale.empty.description }}
 </div>

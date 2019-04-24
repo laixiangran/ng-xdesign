@@ -1,18 +1,16 @@
 import { NgModule } from '@angular/core';
 import { NbDatePipe } from './i18n.pipe';
-import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
 
 @NgModule({
-    imports: [
-        TranslateModule
-    ],
     declarations: [
-        NbDatePipe
+        NbDatePipe,
     ],
     exports: [
         NbDatePipe,
-        TranslatePipe
-    ]
+    ],
+    providers: [
+        NbDatePipe,
+    ],
 })
-export class I18nModule {
+export class NbI18nModule {
 }

@@ -1,7 +1,9 @@
 export default {
+  localeId: 'en-US',
   global: {
-    title: 'Please change language',
-    text: 'Internationalized xdesign!',
-    date: 'Date'
-  }
+    placeholder: 'Please select',
+  },
+  empty: {
+    description: 'No Data',
+  },
 };

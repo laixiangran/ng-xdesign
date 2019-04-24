@@ -1,7 +1,9 @@
 export default {
+  localeId: 'zh-Hant',
   global: {
-    title: '請選擇語言',
-    text: '國際化的xdesign！',
-    date: '日期'
-  }
+    placeholder: '請選擇',
+  },
+  empty: {
+    description: '無此資料',
+  },
 };

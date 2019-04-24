@@ -1,29 +1,40 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule, registerLocaleData } from '@angular/common';
-import { NgModule, LOCALE_ID } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import localeZhHans from '@angular/common/locales/zh-Hans';
-import localeZhHant from '@angular/common/locales/zh-Hant';
-
 import {
     ButtonModule,
-    I18nModule
+    NbI18nModule,
+    NB_I18N,
+    NbI18nInterface,
 } from '../component';
-
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.router';
-
 import { GuideComponentDemo } from './docs';
 import { IconsComponentDemo } from './icons';
 import { TypographyDemo } from './typography';
 import { I18nComponentDemo } from './i18n';
-import { TranslateModule } from '@ngx-translate/core';
 import { ButtonDemoModule } from './button';
+import { registerLocaleData } from '@angular/common';
+import zh_hans from '@angular/common/locales/zh-Hans';
+import zh_hant from '@angular/common/locales/zh-Hant';
+import fr_BE from '@angular/common/locales/fr-BE';
 
-registerLocaleData(localeZhHans);
-registerLocaleData(localeZhHant);
+registerLocaleData(zh_hans);
+registerLocaleData(zh_hant);
+registerLocaleData(fr_BE);
+
+const frLocale: NbI18nInterface  = {
+    localeId: 'fr-BE',
+    global: {
+      placeholder: 'Veuillez choisir',
+    },
+    empty: {
+      description: 'Aucune donnée',
+    },
+};
 
 @NgModule({
     declarations: [
@@ -31,7 +42,7 @@ registerLocaleData(localeZhHant);
         GuideComponentDemo,
         IconsComponentDemo,
         TypographyDemo,
-        I18nComponentDemo
+        I18nComponentDemo,
     ],
     imports: [
         BrowserModule,
@@ -40,14 +51,13 @@ registerLocaleData(localeZhHant);
         FormsModule,
         ReactiveFormsModule,
         ButtonModule.forRoot(),
-        I18nModule,
+        NbI18nModule,
         RouterModule.forRoot(appRoutes, { useHash: true }),
-        TranslateModule.forRoot(),
-        ButtonDemoModule
+        ButtonDemoModule,
     ],
     providers: [
-        { provide: LOCALE_ID, useValue: 'zh-Hans' }
+        { provide: NB_I18N, useValue: frLocale },
     ],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
 })
 export class AppModule { }
