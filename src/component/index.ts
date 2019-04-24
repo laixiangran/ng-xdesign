@@ -6,3 +6,4 @@ export * from './code-highlighter/index';
 export * from './tabs/index';
 export * from './tooltip/index';
 export * from './overlay/index';
+export * from './grid/index';
