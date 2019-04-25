@@ -30,7 +30,7 @@ module.exports = {
                 // (?:x) 非捕获括号，匹配 x 但是不记住匹配项
                 test: /(?:\.ngfactory\.js|\.ngstyle\.js|\.ts)$/,
                 loader: '@ngtools/webpack',
-                exclude: [/\.(spec|e2e)\.ts$/, 'scafford', 'tools', 'src/demo/main-aot.ts']
+                exclude: [/\.(spec|e2e)\.ts$/, helper.root('scafford'), helper.root('tools'), helper.root('src/demo/main-aot.ts')]
             },
             {
                 // Mark files inside `@angular/core` as using SystemJS style dynamic imports.
