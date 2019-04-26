@@ -5,7 +5,6 @@ import {
     style,
     transition,
     trigger,
-    keyframes,
     AnimationTriggerMetadata,
 } from '@angular/animations';
 
