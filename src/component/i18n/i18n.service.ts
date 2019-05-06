@@ -1,6 +1,6 @@
 import { Injectable, Optional, Inject } from '@angular/core';
 import localeObj from './languages';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { NB_I18N } from './i18n.token';
 import { NbI18nInterface } from './i18n.interface';
 
@@ -9,13 +9,16 @@ import { NbI18nInterface } from './i18n.interface';
 })
 export class NbI18nService {
   private _locale: NbI18nInterface;
-  private _change = new BehaviorSubject<any>(this._locale);
+  private _change = new Subject();
 
   constructor(@Optional() @Inject(NB_I18N) locale: NbI18nInterface | string) {
     let initLocale = localeObj['zh-Hans'];
     if (locale) {
       if (typeof locale === 'string') {
         initLocale = localeObj[locale];
+        if (!initLocale) {
+            throw 'Please provide the correct NB_I18N!';
+        }
       } else {
         initLocale = locale;
         localeObj[locale.localeId] = locale;

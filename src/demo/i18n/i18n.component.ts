@@ -13,16 +13,17 @@ export class I18nComponentDemo implements OnInit {
     locale: NbI18nInterface;
 
     constructor(public nbI18nService: NbI18nService, public nbDatePipe: NbDatePipe) {
-        this.currentLocaleId = this.nbI18nService.getLocaleId();
         this.localeIds = this.nbI18nService.getLocaleIds();
-        this.locale = this.nbI18nService.getLocale();
+        this.initLocale();
+        this.nbI18nService.localeChange.subscribe(() => {
+            this.initLocale();
+        });
     }
 
     ngOnInit() {
     }
 
-    setLocaleId(value: string) {
-        this.nbI18nService.setLocaleId(value);
+    initLocale() {
         this.currentLocaleId = this.nbI18nService.getLocaleId();
         this.locale = this.nbI18nService.getLocale();
     }

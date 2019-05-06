@@ -1,5 +1,5 @@
 export default {
-  localeId: 'zh-Hant',
+  localeId: 'zh-Hant-HK',
   global: {
     placeholder: '請選擇',
   },

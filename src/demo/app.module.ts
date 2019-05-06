@@ -18,16 +18,16 @@ import { TypographyDemo } from './typography';
 import { I18nComponentDemo } from './i18n';
 import { ButtonDemoModule } from './button';
 import { registerLocaleData } from '@angular/common';
-import zh_hans from '@angular/common/locales/zh-Hans';
-import zh_hant from '@angular/common/locales/zh-Hant';
-import fr_BE from '@angular/common/locales/fr-BE';
+import zh_hans from '@angular/common/locales/zh-Hans'; // 简体中文
+import zh_hant_HK from '@angular/common/locales/zh-Hant-HK'; // 繁体中文（香港）
+import fr_CA from '@angular/common/locales/fr-CA'; // 法语（加拿大）
 
 registerLocaleData(zh_hans);
-registerLocaleData(zh_hant);
-registerLocaleData(fr_BE);
+registerLocaleData(zh_hant_HK);
+registerLocaleData(fr_CA);
 
-const frLocale: NbI18nInterface  = {
-    localeId: 'fr-BE',
+const frCALocale: NbI18nInterface  = {
+    localeId: 'fr-CA',
     global: {
       placeholder: 'Veuillez choisir',
     },
@@ -56,7 +56,7 @@ const frLocale: NbI18nInterface  = {
         ButtonDemoModule,
     ],
     providers: [
-        { provide: NB_I18N, useValue: frLocale },
+        { provide: NB_I18N, useValue: frCALocale },
     ],
     bootstrap: [AppComponent],
 })

@@ -1,16 +1,24 @@
 <div>
     <label>
         {{ locale.global.placeholder }}
-        <select #localeIdSelect (change)="setLocaleId(localeIdSelect.value)">
+        <select #localeIdSelect (change)="nbI18nService.setLocaleId(localeIdSelect.value)">
             <option *ngFor="let localeId of localeIds" [value]="localeId"
                 [selected]="localeId === currentLocaleId">{{ localeId }}</option>
         </select>
     </label>
 </div>
-<br>
-<div>
-    {{ now | nbDate: currentLocaleId }}
-</div>
-<div>
-    {{ locale.empty.description }}
-</div>
+<h4>
+    文案：{{ locale.empty.description }}
+</h4>
+<h4>
+    日期：{{ now | nbDate: currentLocaleId }}
+</h4>
+<h4>
+    货币：{{ 10 | nbCurrency: currentLocaleId }}
+</h4>
+<h4>
+    数字转字符串：{{ 3.14 | nbDecimal: currentLocaleId }}
+</h4>
+<h4>
+    数字转百分比字符串：{{ 0.259 | nbPercent: currentLocaleId }}
+</h4>
