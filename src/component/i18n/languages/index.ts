@@ -5,5 +5,5 @@ import zh_Hant_HK from './zh-Hant-HK';
 export default {
     'en-US': en_US,
     'zh-Hans': zh_Hans,
-    'zh_Hant_HK': zh_Hant_HK,
+    'zh-Hant-HK': zh_Hant_HK,
 };
