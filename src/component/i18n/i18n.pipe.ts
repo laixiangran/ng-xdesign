@@ -1,7 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { DatePipe, CurrencyPipe, PercentPipe, DecimalPipe } from '@angular/common';
 import { NbI18nService } from './i18n.service';
-import { NbI18nInterface } from './i18n.interface';
 
 @Pipe({
     name: 'nbDate',
