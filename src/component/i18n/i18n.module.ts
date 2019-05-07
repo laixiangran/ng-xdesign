@@ -13,13 +13,7 @@ import { NbDatePipe, NbCurrencyPipe, NbPercentPipe, NbDecimalPipe } from './i18n
         NbCurrencyPipe,
         NbDecimalPipe,
         NbPercentPipe,
-    ],
-    providers: [
-        NbDatePipe,
-        NbCurrencyPipe,
-        NbDecimalPipe,
-        NbPercentPipe,
-    ],
+    ]
 })
 export class NbI18nModule {
 }

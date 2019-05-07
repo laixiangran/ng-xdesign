@@ -7,15 +7,12 @@ import { NbI18nInterface } from './i18n.interface';
     name: 'nbDate',
 })
 export class NbDatePipe implements PipeTransform {
-    currentLocaleId: string;
 
     constructor(private nbI18nService: NbI18nService) {
-        this.currentLocaleId = this.nbI18nService.getLocaleId();
     }
 
-    transform(value: any, localeId: string = this.currentLocaleId, format: string = 'mediumDate'): string | null {
-        const datePipe: DatePipe = new DatePipe(localeId);
-        return datePipe.transform(value, format);
+    transform(value: any, localeId?: string, format?: string): string | null {
+        return this.nbI18nService.formatDate(value, localeId, format);
     }
 }
 
@@ -23,17 +20,12 @@ export class NbDatePipe implements PipeTransform {
     name: 'nbCurrency',
 })
 export class NbCurrencyPipe implements PipeTransform {
-    currentLocaleId: string;
-    currentLocale: NbI18nInterface;
 
     constructor(private nbI18nService: NbI18nService) {
-        this.currentLocaleId = this.nbI18nService.getLocaleId();
     }
 
-    transform(value: any, localeId: string = this.currentLocaleId, currencyCode?: string,
-        display?: 'code' | 'symbol' | 'symbol-narrow' | string, digitsInfo?: string): string | null {
-            const currencyPipe: CurrencyPipe = new CurrencyPipe(localeId);
-            return currencyPipe.transform(value, currencyCode, display, digitsInfo);
+    transform(value: any, localeId?: string, currency?: string, currencyCode?: string, digitsInfo?: string): string | null {
+        return this.nbI18nService.formatCurrency(value, localeId, currency, currencyCode, digitsInfo);
     }
 }
 
@@ -41,16 +33,12 @@ export class NbCurrencyPipe implements PipeTransform {
     name: 'nbDecimal',
 })
 export class NbDecimalPipe implements PipeTransform {
-    currentLocaleId: string;
-    currentLocale: NbI18nInterface;
 
     constructor(private nbI18nService: NbI18nService) {
-        this.currentLocaleId = this.nbI18nService.getLocaleId();
     }
 
-    transform(value: any, localeId: string = this.currentLocaleId, digitsInfo?: string): string | null {
-            const decimalPipe: DecimalPipe = new DecimalPipe(localeId);
-            return decimalPipe.transform(value, digitsInfo);
+    transform(value: any, localeId?: string, digitsInfo?: string): string | null {
+        return this.nbI18nService.formatNumber(value, localeId, digitsInfo);
     }
 }
 
@@ -58,15 +46,11 @@ export class NbDecimalPipe implements PipeTransform {
     name: 'nbPercent',
 })
 export class NbPercentPipe implements PipeTransform {
-    currentLocaleId: string;
-    currentLocale: NbI18nInterface;
 
     constructor(private nbI18nService: NbI18nService) {
-        this.currentLocaleId = this.nbI18nService.getLocaleId();
     }
 
-    transform(value: any, localeId: string = this.currentLocaleId, digitsInfo?: string): string | null {
-            const percentPipe: PercentPipe = new PercentPipe(localeId);
-            return percentPipe.transform(value, digitsInfo);
+    transform(value: any, localeId?: string, digitsInfo?: string): string | null {
+        return this.nbI18nService.formatPercent(value, localeId, digitsInfo);
     }
 }
