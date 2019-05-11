@@ -9,7 +9,7 @@ import {
     NbI18nModule,
     NB_I18N,
     NbI18nInterface,
-} from '../component';
+} from '../component/public_api';
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.router';
 import { GuideComponentDemo } from './docs';

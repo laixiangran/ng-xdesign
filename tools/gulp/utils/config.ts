@@ -3,8 +3,8 @@ import { resolve } from 'path';
 export const config = {
     projectPath: resolve('.'),
     appPath: resolve('./src'),
-    moduleName: 'xdesign',
-    dist: resolve('./dist/packages'),
+    moduleName: 'ng-xdesign',
+    dist: resolve('./dist/ng-xdesign-test'),
     componentPath: resolve('./src/component'),
     demoPath: resolve('./src/demo'),
     umdPath: resolve('./dist/packages/bundle'),

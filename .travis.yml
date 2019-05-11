@@ -22,7 +22,7 @@ cache:
   directories:
     - "./node_modules/"
 before_deploy:
-  - cd dist/packages
+  - cd dist/ng-xdesign-test
 deploy:
   provider: npm
   email: laixiangran@163.com

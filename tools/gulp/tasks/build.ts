@@ -35,39 +35,14 @@ const htmlMinifierOptions = {
  * default build task
  */
 task('build', sequenceTask(
-    'clean',
-    'build:aot',
     'build:assets',
-    'build:inline-assets',
-    'build:bundle',
-    'build:uglify',
-    'build:package'
+    'build:inline-assets'
 ));
-
-/**
- * using ngc for component AOT compile
- */
-task('build:aot', () => {
-    const ngcPath = resolve('./node_modules/.bin/ngc');
-    const childProcess = spawnSync(ngcPath, ['-p', config.tsconfigPath], {shell: true});
-
-    if (childProcess.status !== 0) {
-        console.error(`${yellow(childProcess.stderr.toString())}`);
-    }
-});
-
-/**
- * replace aot-compiled component's templateUrl to template, and styleUrls to styles
- */
-task('build:inline-assets', () => {
-    inlineAssetForDirectory(config.dist);
-});
 
 /**
  * process static assets, including html、less(css)、font and so on
  */
 task('build:assets', sequenceTask([
-    'build:minify:html',
     'build:copy:assetless',
     'build:copy:font',
     'build:copy:componentless',
@@ -75,12 +50,10 @@ task('build:assets', sequenceTask([
 ], 'build:less:replacepath'));
 
 /**
- * minify component html and copy them to the dist folder
+ * replace aot-compiled component's templateUrl to template, and styleUrls to styles
  */
-task('build:minify:html', () => {
-    return src(join(config.componentPath, '**/*.html'))
-        .pipe(htmlmin(htmlMinifierOptions))
-        .pipe(dest(config.dist));
+task('build:inline-assets', () => {
+    inlineAssetForDirectory(config.dist);
 });
 
 /**
@@ -140,70 +113,4 @@ task('build:compile:less', () => {
         }))
         .pipe(gulpCleanCss())
         .pipe(dest(join(config.dist, 'asset/css')));
-});
-
-/**
- * using rollup to generate an umd lib file, that can be used by System.js and Plunker
- */
-task('build:bundle', async () => {
-    const inputOptions = {
-        context: 'this',
-        input: config.entry,
-        external: [
-            '@angular/core',
-            '@angular/common',
-            '@angular/forms',
-            '@angular/router',
-            '@angular/http',
-            'moment',
-            'echarts',
-            'prismjs'
-        ],
-        plugins: [
-            rollupNodeResolutionPlugin(),
-            rollupCommonjsPlugin({
-                include: [
-                    'node_modules/rxjs/**'
-                ]
-            })
-        ]
-    };
-
-    const outputOptions = {
-        format: 'umd',
-        moduleId: '',
-        name: config.moduleName,
-        globals: {
-            '@angular/core': 'ng.core',
-            '@angular/common': 'ng.common',
-            '@angular/forms': 'ng.forms',
-            '@angular/router': 'ng.router',
-            '@angular/http': 'ng.http',
-            'moment': 'moment',
-            'echarts': 'echarts',
-            'prismjs': 'prismjs'
-        },
-        file: join(config.umdPath, `${config.moduleName}.umd.js`),
-        banner: `/** Copyright (c) BAIDU INC. */`,
-        sourcemap: true
-    };
-
-    const bundle = await rollup.rollup(inputOptions);
-    // const { code, map } = await bundle.generate(outputOptions);
-
-    await bundle.write(outputOptions);
-});
-
-/**
- * using uglify-js to minify umd lib file
- */
-task('build:uglify', (cb?: Function) => {
-    const uglifyPath = resolve('./node_modules/.bin/uglifyjs');
-    const umdFile = join(config.umdPath, `${config.moduleName}.umd.js`);
-    const umdMiniFile = join(config.umdPath, `${config.moduleName}.umd.min.js`);
-    const childProcess = spawnSync(uglifyPath, ['-c', '-m', '--source-map', '-o', umdMiniFile, '--', umdFile]);
-
-    if (cb) {
-        cb();
-    }
 });

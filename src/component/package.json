@@ -1,0 +1,22 @@
+{
+  "name": "ng-xdesign-test",
+  "version": "7.2.9",
+  "description": "xdesign - A enterprize angular ui component library",
+  "author": "laixiangran <laixiangran@163.com>",
+  "license": "MIT",
+  "repository": {
+      "type": "git",
+      "url": "https://github.com/laixiangran/ng-xdesign.git"
+  },
+  "peerDependencies": {
+    "@angular/core": "~7.2.0",
+    "@angular/common": "~7.2.0"
+  },
+  "ngPackage": {
+    "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
+    "lib": {
+      "entryFile": "public_api.ts"
+    },
+    "dest": "../../dist/ng-xdesign-test"
+  }
+}
