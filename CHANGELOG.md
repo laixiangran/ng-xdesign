@@ -1,3 +1,13 @@
+<a name="7.2.11"></a>
+## [7.2.11](https://github.com/laixiangran/ng-xdesign/compare/7.2.10...7.2.11) (2019-05-12)
+
+
+### Bug Fixes
+
+* add some package ([66bcf95](https://github.com/laixiangran/ng-xdesign/commit/66bcf95))
+
+
+
 <a name="7.2.10"></a>
 ## [7.2.10](https://github.com/laixiangran/ng-xdesign/compare/7.2.9...7.2.10) (2019-05-12)
 
