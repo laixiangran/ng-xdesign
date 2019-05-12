@@ -5,7 +5,7 @@ import {
 
 import { coerceBooleanProperty } from '../util/coerce';
 import { dedupleClassName } from '../util/dom';
-import { ButtonConfig } from './button.config';
+import { NbButtonConfig } from './button.config';
 import { OnChange } from '../core/decorators';
 
 /** default button theme types */
@@ -53,7 +53,7 @@ export class NbButtonComponent implements OnChanges, AfterViewInit {
 
     constructor(
         private _el: ElementRef,
-        private _config: ButtonConfig
+        private _config: NbButtonConfig
     ) {
         Object.assign(this, _config);
     }

@@ -1,1 +1,1 @@
-export * from './common-wrap';
+export { FunctionProp } from './common-wrap';

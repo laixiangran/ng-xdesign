@@ -18,5 +18,4 @@ const components = [
         ...components
     ]
 })
-export class NbButtonModule {
-}
+export class NbButtonModule {}

@@ -1,2 +1,2 @@
-export * from './tabs';
-export * from './tabs.module';
+export { NbTabsComponent } from './tabs';
+export { NbTabsModule } from './tabs.module';

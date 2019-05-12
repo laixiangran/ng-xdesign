@@ -1,3 +1,3 @@
-export * from './button';
-export * from './button.module';
-export * from './button.config';
+export { NbButtonComponent, NbButtonAnchorComponent } from './button';
+export { NbButtonModule } from './button.module';
+export { NbButtonConfig } from './button.config';

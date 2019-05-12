@@ -1,2 +1,2 @@
 
-export * from './grid.module';
+export { NbGridModule } from './grid.module';

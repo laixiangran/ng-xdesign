@@ -1,2 +1,2 @@
-export * from './code-box';
-export * from './code-box.module';
+export { NbCodeBoxComponent } from './code-box';
+export { NbCodeBoxModule } from './code-box.module';

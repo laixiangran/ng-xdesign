@@ -1,3 +1,3 @@
-export * from './tooltip';
-export * from './tiplayer';
-export * from './tooltip.module';
+export { NbTooltipDirective } from './tooltip';
+export { NbTiplayerComponent } from './tiplayer';
+export { NbTooltipModule } from './tooltip.module';

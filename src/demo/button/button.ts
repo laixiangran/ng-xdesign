@@ -1,15 +1,15 @@
 import { Component, AfterViewInit } from '@angular/core';
 
-import { ButtonConfig } from '../../component/button';
-export function getButtonConfig(): ButtonConfig {
-    return Object.assign(new ButtonConfig, { theme: 'default' });
+import { NbButtonConfig } from '../../component/button';
+export function getNbButtonConfig(): NbButtonConfig {
+    return Object.assign(new NbButtonConfig, { theme: 'default' });
 }
 
 @Component({
     selector: 'demo-button',
     templateUrl: './button.html',
     styleUrls: ['./button.less'],
-    providers: [{ provide: ButtonConfig, useFactory: getButtonConfig }]
+    providers: [{ provide: NbButtonConfig, useFactory: getNbButtonConfig }]
 })
 export class ButtonDemo {
 
