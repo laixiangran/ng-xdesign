@@ -37,9 +37,13 @@ task('bump-version', () => {
         bumpType = 'prerelease';
     }
 
-    return src('./package.json')
+    src('./package.json')
         .pipe(bump({type: bumpType})).on('error', gutil.log)
         .pipe(dest('./'));
+
+    return src('./src/component/package.json')
+        .pipe(bump({type: bumpType})).on('error', gutil.log)
+        .pipe(dest('./src/component/'));
 });
 
 task('changelog', () => {

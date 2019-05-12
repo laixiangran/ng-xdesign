@@ -1,43 +1,30 @@
 import { task, src, dest } from 'gulp';
-import { spawnSync } from 'child_process';
-import { resolve, join } from 'path';
+import { join } from 'path';
 import { sequenceTask } from '../utils/sequence-task';
 import { inlineAssetForDirectory } from '../utils/inline-asset';
 import { copyTask } from '../utils/task_helpers';
 import { config } from '../utils/config';
 import { readFileSync, writeFileSync } from 'fs';
 import { sync as glob } from 'glob';
-import * as chalk from 'chalk';
 
-const yellow = chalk.default.yellow;
-const rollup = require('rollup');
-const rollupNodeResolutionPlugin = require('rollup-plugin-node-resolve');
-const rollupCommonjsPlugin = require('rollup-plugin-commonjs');
-const htmlmin = require('gulp-htmlmin');
 const less = require('gulp-less');
 const lessAutoprefix = require('less-plugin-autoprefix');
 const autoprefixPlugin = new lessAutoprefix({ browsers: ['last 2 versions'] });
 const gulpCleanCss = require('gulp-clean-css');
-const uglifyJS = require('uglify-js');
-const replace = require('gulp-replace');
-
-/**
- * options for htmlmin
- */
-const htmlMinifierOptions = {
-    collapseWhitespace: true,
-    removeComments: true,
-    caseSensitive: true,
-    removeAttributeQuotes: false
-};
 
 /**
  * default build task
  */
 task('build', sequenceTask(
     'build:assets',
-    'build:inline-assets'
+    'build:inline-assets',
+    'copy-readme',
 ));
+
+task('copy-readme', () => {
+    const readmeFilePath = join(config.componentPath, '../../README.md');
+    return src(readmeFilePath).pipe(dest(config.dist));
+});
 
 /**
  * process static assets, including html、less(css)、font and so on

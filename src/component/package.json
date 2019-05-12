@@ -3,6 +3,7 @@
   "version": "7.2.9",
   "description": "xdesign - A enterprize angular ui component library",
   "author": "laixiangran <laixiangran@163.com>",
+  "keywords": ["angular", "one design"],
   "license": "MIT",
   "repository": {
       "type": "git",
