@@ -1,3 +1,8 @@
+<a name="7.2.18"></a>
+## [7.2.18](https://github.com/laixiangran/ng-xdesign/compare/7.2.17...7.2.18) (2019-05-12)
+
+
+
 <a name="7.2.17"></a>
 ## [7.2.17](https://github.com/laixiangran/ng-xdesign/compare/7.2.16...7.2.17) (2019-05-12)
 
