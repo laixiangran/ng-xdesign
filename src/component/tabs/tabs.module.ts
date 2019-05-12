@@ -1,16 +1,32 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TabsComponent } from './tabs';
-import { TabComponent } from './tab';
-import { TabHeaderComponent } from './tab-header';
-import { TabTitleDirective } from './tab-title.directive';
+import { NbTabsComponent } from './tabs';
+import { NbTabComponent } from './tab';
+import { NbTabHeaderComponent } from './tab-header';
+import { NbTabTitleDirective } from './tab-title.directive';
 import { AttachDirective } from './attach.directive';
-import { InkBarComponent } from './ink-bar';
-import { ButtonModule } from '../button';
+import { NbInkBarComponent } from './ink-bar';
+import { NbButtonModule } from '../button';
+
+const components = [
+    NbTabsComponent,
+    NbTabComponent,
+    NbInkBarComponent,
+    NbTabHeaderComponent,
+    NbTabTitleDirective,
+    AttachDirective
+];
 
 @NgModule({
-    imports: [CommonModule, ButtonModule],
-    declarations: [TabsComponent, TabComponent, InkBarComponent, TabHeaderComponent, TabTitleDirective, AttachDirective],
-    exports: [TabsComponent, TabComponent, InkBarComponent, TabHeaderComponent, TabTitleDirective, AttachDirective]
+    imports: [
+        CommonModule,
+        NbButtonModule
+    ],
+    declarations: [
+        ...components
+    ],
+    exports: [
+        ...components
+    ]
 })
-export class TabsModule { }
+export class NbTabsModule { }

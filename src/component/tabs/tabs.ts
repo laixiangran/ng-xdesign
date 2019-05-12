@@ -3,9 +3,9 @@ import {
     OnInit, ViewEncapsulation, ChangeDetectionStrategy, ViewChild, ViewChildren, AfterViewChecked,
     ContentChildren, QueryList, AfterContentInit, AfterViewInit, ChangeDetectorRef, AfterContentChecked
 } from '@angular/core';
-import { TabComponent } from './tab';
-import { InkBarComponent } from './ink-bar';
-import { TabHeaderComponent } from './tab-header';
+import { NbTabComponent } from './tab';
+import { NbInkBarComponent } from './ink-bar';
+import { NbTabHeaderComponent } from './tab-header';
 import { OnChange } from '../core/decorators';
 
 /** default tab size types */
@@ -22,7 +22,7 @@ export type TABS_SIZE = 'default' | 'large' | string;
     },
     exportAs: 'nbTabs'
 })
-export class TabsComponent implements OnInit, AfterViewInit, AfterViewChecked {
+export class NbTabsComponent implements OnInit, AfterViewInit, AfterViewChecked {
 
     /**
      * Tabs尺寸, 'default' | 'large'
@@ -50,11 +50,11 @@ export class TabsComponent implements OnInit, AfterViewInit, AfterViewChecked {
      */
     @Output() change: EventEmitter<object> = new EventEmitter<object>();
 
-    @ContentChildren(TabComponent) tabs: QueryList<TabComponent>;
+    @ContentChildren(NbTabComponent) tabs: QueryList<NbTabComponent>;
 
-    @ViewChild(InkBarComponent) inkBar: InkBarComponent;
+    @ViewChild(NbInkBarComponent) inkBar: NbInkBarComponent;
 
-    @ViewChildren(TabHeaderComponent) tabHeader: QueryList<TabHeaderComponent>;
+    @ViewChildren(NbTabHeaderComponent) tabHeader: QueryList<NbTabHeaderComponent>;
 
     activeIndex: number;
 

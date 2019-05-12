@@ -9,7 +9,7 @@ import {
     ContentChild
 } from '@angular/core';
 import { OnChange } from '../core/decorators';
-import { TabTitleDirective } from './tab-title.directive';
+import { NbTabTitleDirective } from './tab-title.directive';
 
 @Component({
     selector: 'nb-tab',
@@ -22,9 +22,9 @@ import { TabTitleDirective } from './tab-title.directive';
         '[class.active]': 'active',
     }
 })
-export class TabComponent {
+export class NbTabComponent {
 
-    @ContentChild(TabTitleDirective) templateTitle: TabTitleDirective;
+    @ContentChild(NbTabTitleDirective) templateTitle: NbTabTitleDirective;
 
     @Input() title: string;
 

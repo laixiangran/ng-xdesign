@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
-    ButtonModule,
+    NbButtonModule,
     NbI18nModule,
     NB_I18N,
     NbI18nInterface,
@@ -50,7 +50,7 @@ const frCALocale: NbI18nInterface  = {
         BrowserAnimationsModule,
         FormsModule,
         ReactiveFormsModule,
-        ButtonModule.forRoot(),
+        NbButtonModule,
         NbI18nModule,
         RouterModule.forRoot(appRoutes, { useHash: true }),
         ButtonDemoModule,

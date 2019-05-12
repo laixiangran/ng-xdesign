@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { <%= upperName %>Module } from '../../component/<%= name %>';
-import { CodeBoxModule } from '../../component/code-box';
-import { CodeHighlighterModule } from '../../component/code-highlighter';
+import { NbCodeBoxModule } from '../../component/code-box';
+import { NbCodeHighlighterModule } from '../../component/code-highlighter';
 
 import { <%= upperName %>Demo } from './<%= name %>';
 import { <%= upperName %>BasicDemo } from './basic/<%= name %>-basic';
@@ -12,8 +12,8 @@ import { <%= upperName %>BasicDemo } from './basic/<%= name %>-basic';
     imports: [
         CommonModule,
         <%= upperName %>Module,
-        CodeBoxModule,
-        CodeHighlighterModule
+        NbCodeBoxModule,
+        NbCodeHighlighterModule
     ],
     declarations: [
         <%= upperName %>Demo,

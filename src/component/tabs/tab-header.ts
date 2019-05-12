@@ -19,7 +19,7 @@ import { OnChange } from '../core/decorators';
         'class': 'nb-widget nb-tab-header'
     }
 })
-export class TabHeaderComponent {
+export class NbTabHeaderComponent {
 
     constructor(public elementRef: ElementRef) {
     }

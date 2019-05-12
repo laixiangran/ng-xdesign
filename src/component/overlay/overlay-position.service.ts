@@ -5,10 +5,10 @@ import { ConnectedPositionStrategy } from './connected-position.strategy';
 import { GlobalPositionStrategy } from './global-position.strategy';
 import { Subscription } from 'rxjs';
 import { ViewportRuler } from './scroll-strategy';
-import { OverlayComponent } from './overlay';
+import { NbOverlayComponent } from './overlay';
 
 @Injectable()
-export class OverlayPositionService {
+export class NbOverlayPositionService {
 
     /** overlay component for getting its properties such as hasArrow, embedded */
     private overlayComponent: any;

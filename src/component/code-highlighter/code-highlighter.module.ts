@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CodeHighlighterComponent } from './code-highlighter';
+import { NbCodeHighlighterComponent } from './code-highlighter';
 
 @NgModule({
-    imports: [CommonModule],
-    declarations: [CodeHighlighterComponent],
-    exports: [CodeHighlighterComponent]
+    imports: [
+        CommonModule
+    ],
+    declarations: [
+        NbCodeHighlighterComponent
+    ],
+    exports: [
+        NbCodeHighlighterComponent
+    ]
 })
-export class CodeHighlighterModule { }
+export class NbCodeHighlighterModule { }

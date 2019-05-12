@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TooltipDirective } from './tooltip';
-import { TiplayerComponent } from './tiplayer';
-import { OverlayModule } from '../overlay';
+import { NbTooltipDirective } from './tooltip';
+import { NbTiplayerComponent } from './tiplayer';
+import { NbOverlayModule } from '../overlay';
 
 @NgModule({
-    imports: [CommonModule, OverlayModule],
-    declarations: [TooltipDirective, TiplayerComponent],
-    exports: [TooltipDirective, TiplayerComponent],
-    entryComponents: [TiplayerComponent]
+    imports: [CommonModule, NbOverlayModule],
+    declarations: [NbTooltipDirective, NbTiplayerComponent],
+    exports: [NbTooltipDirective, NbTiplayerComponent],
+    entryComponents: [NbTiplayerComponent]
 })
-export class TooltipModule { }
+export class NbTooltipModule { }

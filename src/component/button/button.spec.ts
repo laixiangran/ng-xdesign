@@ -1,27 +1,27 @@
 import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { Component, DebugElement, ViewChild } from '@angular/core';
-import { ButtonModule } from './button.module';
+import { NbButtonModule } from './button.module';
 
 @Component({
     template: '<button nb-button #button> OK </button>'
 })
-class ButtonTestComponent {
+class NbButtonTestComponent {
     @ViewChild('button') button;
 }
 
 describe('nb-button', () => {
 
-    let fixture: ComponentFixture<ButtonTestComponent>;
-    let component: ButtonTestComponent;
+    let fixture: ComponentFixture<NbButtonTestComponent>;
+    let component: NbButtonTestComponent;
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [ ButtonTestComponent ],
-            imports: [ ButtonModule ]
+            declarations: [ NbButtonTestComponent ],
+            imports: [ NbButtonModule ]
         }).compileComponents();
 
-        fixture = TestBed.createComponent(ButtonTestComponent);
+        fixture = TestBed.createComponent(NbButtonTestComponent);
         component = fixture.componentInstance;
 
         fixture.detectChanges();

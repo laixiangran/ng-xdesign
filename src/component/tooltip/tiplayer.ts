@@ -17,8 +17,8 @@ import {
 } from '@angular/core';
 import { OnChange } from '../core/decorators';
 import { fadeAnimation } from '../animation/fade-animations';
-import { OverlayPositionService } from '../overlay/overlay-position.service';
-import { OverlayComponent } from '../overlay';
+import { NbOverlayPositionService } from '../overlay/overlay-position.service';
+import { NbOverlayComponent } from '../overlay';
 import { Placement } from '../overlay/position.interface';
 
 @Component({
@@ -26,7 +26,7 @@ import { Placement } from '../overlay/position.interface';
     templateUrl: './tiplayer.html',
     encapsulation: ViewEncapsulation.None,
     changeDetection: ChangeDetectionStrategy.OnPush,
-    providers: [OverlayPositionService],
+    providers: [NbOverlayPositionService],
     animations: [ fadeAnimation ],
     exportAs: 'nbTiplayer',
     host: {
@@ -39,7 +39,7 @@ import { Placement } from '../overlay/position.interface';
     }
 })
 
-export class TiplayerComponent extends OverlayComponent implements OnInit, OnDestroy {
+export class NbTiplayerComponent extends NbOverlayComponent implements OnInit, OnDestroy {
 
     /**
      * 提示框宽度

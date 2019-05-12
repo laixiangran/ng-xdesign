@@ -1,9 +1,9 @@
 import { TestBed, ComponentFixture, inject } from '@angular/core/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { OverlayPositionService } from '../overlay/overlay-position.service';
+import { NbOverlayPositionService } from '../overlay/overlay-position.service';
 import { ViewportRuler } from '../overlay/scroll-strategy';
 import { Component } from '@angular/core';
-import { TabsModule } from './index';
+import { NbTabsModule } from './index';
 
 function getTabTitles(nativeEl: HTMLElement) {
     return nativeEl.querySelectorAll('.nb-tab-header');
@@ -50,14 +50,14 @@ describe('nb-tabs', () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [TabsTestComponent],
-            imports: [TabsModule, BrowserAnimationsModule],
-            providers: [OverlayPositionService, ViewportRuler],
+            declarations: [NbTabsTestComponent],
+            imports: [NbTabsModule, BrowserAnimationsModule],
+            providers: [NbOverlayPositionService, ViewportRuler],
         }).compileComponents();
     });
 
     // it('should render tabs and select first tab as active by default', () => {
-    //     const fixture = TestBed.createComponent(TabsTestComponent);
+    //     const fixture = TestBed.createComponent(NbTabsTestComponent);
     //     fixture.detectChanges();
 
     //     const tabTitles = getTabTitles(fixture.nativeElement);
@@ -90,8 +90,8 @@ describe('nb-tabs', () => {
     //         </nb-tabs>
     //     `;
 
-    //     TestBed.overrideComponent(TabsTestComponent, {set: {template: html}});
-    //     const fixture = TestBed.createComponent(TabsTestComponent);
+    //     TestBed.overrideComponent(NbTabsTestComponent, {set: {template: html}});
+    //     const fixture = TestBed.createComponent(NbTabsTestComponent);
     //     fixture.detectChanges();
 
     //     const tabTitles = getTabTitles(fixture.nativeElement);
@@ -102,8 +102,8 @@ describe('nb-tabs', () => {
     it('should not crash for empty tabs', () => {
         const html = `<nb-tabs underline></nb-tabs>`;
 
-        TestBed.overrideComponent(TabsTestComponent, {set: {template: html}});
-        const fixture = TestBed.createComponent(TabsTestComponent);
+        TestBed.overrideComponent(NbTabsTestComponent, {set: {template: html}});
+        const fixture = TestBed.createComponent(NbTabsTestComponent);
         fixture.detectChanges();
 
         expectTabs(fixture.nativeElement, []);
@@ -118,15 +118,15 @@ describe('nb-tabs', () => {
             </nb-tabs>
         `;
 
-        TestBed.overrideComponent(TabsTestComponent, {set: {template: html}});
-        const fixture = TestBed.createComponent(TabsTestComponent);
+        TestBed.overrideComponent(NbTabsTestComponent, {set: {template: html}});
+        const fixture = TestBed.createComponent(NbTabsTestComponent);
         fixture.detectChanges();
 
         expectTabs(fixture.nativeElement, [false, false, true, false]);
     });
 
     it('should change active tab on tab title click except for disabled', () => {
-        const fixture = TestBed.createComponent(TabsTestComponent);
+        const fixture = TestBed.createComponent(NbTabsTestComponent);
         fixture.detectChanges();
 
         const tabTitles = getTabTitles(fixture.nativeElement);
@@ -151,8 +151,8 @@ describe('nb-tabs', () => {
                 <nb-tab title="不可点击" disabled>不可点击</nb-tab>
             </nb-tabs>
         `;
-        TestBed.overrideComponent(TabsTestComponent, {set: {template: html}});
-        const fixture = TestBed.createComponent(TabsTestComponent);
+        TestBed.overrideComponent(NbTabsTestComponent, {set: {template: html}});
+        const fixture = TestBed.createComponent(NbTabsTestComponent);
         fixture.detectChanges();
 
         const tabTitles = getTabTitles(fixture.nativeElement);
@@ -196,7 +196,7 @@ describe('nb-tabs', () => {
         `
 })
 
-class TabsTestComponent {
+class NbTabsTestComponent {
 
     onChange = () => {};
 }

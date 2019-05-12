@@ -13,11 +13,11 @@ $ npm install --save xdesign
 首先，导入组件所在的模块。
 
 ```typescript
-import { ButtonModule, TableModule } from 'xdesign';
+import { NbButtonModule, TableModule } from 'xdesign';
 
 @NgModule({
     // ...
-    imports: [ButtonModule, TableModule]
+    imports: [NbButtonModule, TableModule]
     // ...
 })
 export class AppModule { }
@@ -83,7 +83,7 @@ $ npm install --save xdesign
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ButtonModule } from 'xdesign';
+import { NbButtonModule } from 'xdesign';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -92,7 +92,7 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    ButtonModule
+    NbButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

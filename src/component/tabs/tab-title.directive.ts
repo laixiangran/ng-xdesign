@@ -9,7 +9,7 @@ import { Directive, TemplateRef, Input } from '@angular/core';
   exportAs: 'nbTabTitle'
 })
 
-export class TabTitleDirective {
+export class NbTabTitleDirective {
 
     /**
      * 标签标题

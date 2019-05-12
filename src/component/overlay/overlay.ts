@@ -4,16 +4,16 @@ import { Input, Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy, S
 import { Placement } from './position.interface';
 import { OnChange } from '../core/decorators';
 import { ViewportRuler } from './scroll-strategy';
-import { OverlayPositionService } from './overlay-position.service';
-import { OverlayOriginDirective } from './overlay-origin.directive';
-import { TooltipDirective } from '../tooltip/tooltip';
+import { NbOverlayPositionService } from './overlay-position.service';
+import { NbOverlayOriginDirective } from './overlay-origin.directive';
+import { NbTooltipDirective } from '../tooltip/tooltip';
 
 @Component({
     selector: 'nb-overlay',
     templateUrl: './overlay.html',
     encapsulation: ViewEncapsulation.None,
     changeDetection: ChangeDetectionStrategy.OnPush,
-    providers: [OverlayPositionService],
+    providers: [NbOverlayPositionService],
     preserveWhitespaces: false,
     host: {
         'class': 'nb-widget nb-overlay',
@@ -22,16 +22,16 @@ import { TooltipDirective } from '../tooltip/tooltip';
     },
     exportAs: 'nbOverlay'
 })
-export class OverlayComponent implements OnInit, AfterViewInit, OnDestroy {
+export class NbOverlayComponent implements OnInit, AfterViewInit, OnDestroy {
 
     /** the event of opening the overlay */
-    @Output() openHandler: EventEmitter<OverlayComponent> = new EventEmitter<OverlayComponent>();
+    @Output() openHandler: EventEmitter<NbOverlayComponent> = new EventEmitter<NbOverlayComponent>();
 
     /** the event of closing the overlay */
-    @Output() closeHandler: EventEmitter<OverlayComponent> = new EventEmitter<OverlayComponent>();
+    @Output() closeHandler: EventEmitter<NbOverlayComponent> = new EventEmitter<NbOverlayComponent>();
 
     /** * attached origin element */
-    @Input() origin: OverlayOriginDirective | TooltipDirective;
+    @Input() origin: NbOverlayOriginDirective | NbTooltipDirective;
 
     /** A selector specifying the element the popover should be appended to. */
     /** Currently only supports "body".*/
@@ -63,7 +63,7 @@ export class OverlayComponent implements OnInit, AfterViewInit, OnDestroy {
         public el: ElementRef,
         private cdRef: ChangeDetectorRef,
         private render: Renderer2,
-        private overlayPositionService: OverlayPositionService
+        private nbOverlayPositionService: NbOverlayPositionService
     ) {
     }
 
@@ -96,14 +96,14 @@ export class OverlayComponent implements OnInit, AfterViewInit, OnDestroy {
             window.document.querySelector(this.container)!.appendChild(this.el.nativeElement);
         }
         if (this.origin) {
-            this._positionStategy = this.overlayPositionService
+            this._positionStategy = this.nbOverlayPositionService
                 .attachTo(this.origin.el, this, this.placement);
         }
         // 调用show方法和组件渲染完成在不同场景下的执行顺序不同，所以两处都需要重新定位。
         // 此处定位一是因为渲染完成能够获得真实宽高，此时定位更为准确。
         // 二是因为当show方法执行早于此方法时，show方法中并没有定位。比如Tooltip的hover场景。
         if (this._positionStategy) {
-            this.overlayPositionService.updatePosition(this._positionStategy);
+            this.nbOverlayPositionService.updatePosition(this._positionStategy);
         }
     }
 
@@ -118,7 +118,7 @@ export class OverlayComponent implements OnInit, AfterViewInit, OnDestroy {
             // 调用show方法和组件渲染完成在不同场景下的执行顺序不同，所以两处都需要重新定位。
             // 此处定位是因为渲染完成后计算的位置可能并不准确，比如overlay渲染完成早于overlay上方的DOM或组件渲染完成。
             if (this._positionStategy) {
-                this.overlayPositionService.updatePosition(this._positionStategy);
+                this.nbOverlayPositionService.updatePosition(this._positionStategy);
             }
             this.visibility = true;
             this.openHandler.emit(this);
@@ -163,7 +163,7 @@ export class OverlayComponent implements OnInit, AfterViewInit, OnDestroy {
      */
     changeOrigin(origin) {
         if (this.origin !== origin) {
-            this._positionStategy = this.overlayPositionService
+            this._positionStategy = this.nbOverlayPositionService
                 .attachTo(origin.el, this, this.placement);
         }
         this.origin = origin;

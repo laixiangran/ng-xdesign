@@ -1,21 +1,22 @@
-import { NgModule, ModuleWithProviders } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ButtonComponent, ButtonAnchorComponent } from './button';
-import { ButtonConfig } from './button.config';
+import { NbButtonComponent, NbButtonAnchorComponent } from './button';
 
 const components = [
-    ButtonComponent,
-    ButtonAnchorComponent
+    NbButtonComponent,
+    NbButtonAnchorComponent,
 ];
 
 @NgModule({
-    imports: [CommonModule],
-    declarations: [...components],
-    exports: [...components],
-    providers: [ButtonConfig]
+    imports: [
+        CommonModule
+    ],
+    declarations: [
+        ...components
+    ],
+    exports: [
+        ...components
+    ]
 })
-export class ButtonModule {
-    static forRoot(): ModuleWithProviders {
-        return { ngModule: ButtonModule, providers: [ButtonConfig] };
-    }
+export class NbButtonModule {
 }

@@ -13,7 +13,7 @@ import {
     },
     exportAs: 'nbCodeBox'
 })
-export class CodeBoxComponent {
+export class NbCodeBoxComponent {
     /**
      * ts/js code
      * @default ''

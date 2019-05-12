@@ -30,7 +30,7 @@ export type BUTTON_SIZE = 'xs' | 'sm' | 'default' | 'lg' | string;
     },
     exportAs: 'nbButton'
 })
-export class ButtonComponent implements OnChanges, AfterViewInit {
+export class NbButtonComponent implements OnChanges, AfterViewInit {
 
     /**
      * button theme, there are four default themes: 'primary' | 'default' | 'neutral' | 'transparent'
@@ -117,7 +117,7 @@ export class ButtonComponent implements OnChanges, AfterViewInit {
     },
     exportAs: 'nbButton, nbAnchor'
 })
-export class ButtonAnchorComponent extends ButtonComponent {
+export class NbButtonAnchorComponent extends NbButtonComponent {
 
     /**
      * prevent link button default navigation event

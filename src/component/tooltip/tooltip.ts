@@ -20,22 +20,22 @@ import {
 } from '@angular/core';
 
 import { OnChange } from '../core/decorators';
-import { TiplayerComponent } from './tiplayer';
+import { NbTiplayerComponent } from './tiplayer';
 import { ConnectionPosition, Placement } from '../util/position';
-import { OverlayPositionService } from '../overlay/overlay-position.service';
+import { NbOverlayPositionService } from '../overlay/overlay-position.service';
 import { DynamicComponentService } from '../overlay/dynamic-component.service';
 import { Observable } from 'rxjs';
 
 @Directive({
     selector: '[nbTooltip]',
     exportAs: 'nbTooltip',
-    providers: [DynamicComponentService, OverlayPositionService],
+    providers: [DynamicComponentService, NbOverlayPositionService],
     host: {
         '(body:click)': 'handleBodyInteraction()'
     }
 })
 
-export class TooltipDirective implements OnInit, OnChanges, OnDestroy {
+export class NbTooltipDirective implements OnInit, OnChanges, OnDestroy {
 
     /**
      * 提示框宽度
@@ -100,7 +100,7 @@ export class TooltipDirective implements OnInit, OnChanges, OnDestroy {
     private leaveListener: Function;
     private focusListener: Function;
     private blurListener: Function;
-    private tiplayerInstance: TiplayerComponent | null;
+    private tiplayerInstance: NbTiplayerComponent | null;
     private positionStrategy;
 
     constructor(
@@ -110,8 +110,8 @@ export class TooltipDirective implements OnInit, OnChanges, OnDestroy {
         private injector: Injector,
         private ngZone: NgZone,
         private componentFactoryResolver: ComponentFactoryResolver,
-        private dynamicComponentService: DynamicComponentService<TiplayerComponent>,
-        private overlayPositionService: OverlayPositionService) {
+        private dynamicComponentService: DynamicComponentService<NbTiplayerComponent>,
+        private nbOverlayPositionService: NbOverlayPositionService) {
     }
 
     ngOnInit() {
@@ -199,7 +199,7 @@ export class TooltipDirective implements OnInit, OnChanges, OnDestroy {
         }
 
         let componentRef = this.dynamicComponentService.createDynamicComponent(
-            this.viewContainerRef, TiplayerComponent, this.nbTooltip, hostElement);
+            this.viewContainerRef, NbTiplayerComponent, this.nbTooltip, hostElement);
         this.tiplayerInstance = componentRef.instance;
 
         const config = {
@@ -221,7 +221,7 @@ export class TooltipDirective implements OnInit, OnChanges, OnDestroy {
      */
     needReposition() {
         if (this.positionStrategy) {
-            this.overlayPositionService.updatePosition(this.positionStrategy);
+            this.nbOverlayPositionService.updatePosition(this.positionStrategy);
         }
     }
 

@@ -9,7 +9,7 @@ import { Directive, ElementRef } from '@angular/core';
   exportAs: 'nbOverlayOrigin'
 })
 
-export class OverlayOriginDirective {
+export class NbOverlayOriginDirective {
   constructor(
       /** Reference to the element on which the directive is applied. */
       public el: ElementRef) { }

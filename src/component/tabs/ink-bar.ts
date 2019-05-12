@@ -15,7 +15,7 @@ import {
     },
     exportAs: 'nbInkBar'
 })
-export class InkBarComponent {
+export class NbInkBarComponent {
 
     constructor(
         private _elementRef: ElementRef,

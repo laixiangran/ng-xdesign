@@ -3,20 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 
 
-import { ButtonModule } from '../component/button';
+import { NbButtonModule } from '../component/button';
 
 import { E2ERouterModule } from './e2e-route';
 
 import { RootComponent } from './root-app/root-app';
-import { ButtonComponent } from './button/button-e2e';
+import { NbButtonComponent } from './button/button-e2e';
 
 const modules = [
-    ButtonModule
+    NbButtonModule
 ];
 
 const components = [
     RootComponent,
-    ButtonComponent
+    NbButtonComponent
 ];
 
 @NgModule({

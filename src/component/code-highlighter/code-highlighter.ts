@@ -22,7 +22,7 @@ const prism: any = (prismLib as any).default ? (prismLib as any).default : prism
     },
     exportAs: 'nbCodeHighlighter'
 })
-export class CodeHighlighterComponent implements AfterViewInit {
+export class NbCodeHighlighterComponent implements AfterViewInit {
 
     /**
      * code language, see http://prismjs.com/index.html#languages-list

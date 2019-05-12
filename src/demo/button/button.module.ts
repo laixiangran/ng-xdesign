@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { ButtonModule } from '../../component/button';
-import { CodeBoxModule } from '../../component/code-box';
-import { CodeHighlighterModule } from '../../component/code-highlighter';
+import { NbButtonModule } from '../../component/button';
+import { NbCodeBoxModule } from '../../component/code-box';
+import { NbCodeHighlighterModule } from '../../component/code-highlighter';
 
 import { ButtonDemo } from './button';
 import { ButtonThemeDemo } from './themes/button-theme';
@@ -16,9 +16,9 @@ import { ButtonIconDemo } from './icon/button-icon';
     imports: [
         CommonModule,
         RouterModule,
-        ButtonModule,
-        CodeBoxModule,
-        CodeHighlighterModule
+        NbButtonModule,
+        NbCodeBoxModule,
+        NbCodeHighlighterModule
     ],
     declarations: [
         ButtonDemo,

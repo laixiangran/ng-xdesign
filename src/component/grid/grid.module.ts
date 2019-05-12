@@ -14,5 +14,5 @@ import { NbColDirective } from './col.directive';
         NbColDirective
     ]
 })
-export class GridModule {
+export class NbGridModule {
 }
