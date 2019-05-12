@@ -1,3 +1,28 @@
+<a name="7.2.10"></a>
+## [7.2.10](https://github.com/laixiangran/ng-xdesign/compare/7.2.9...7.2.10) (2019-05-12)
+
+
+### Bug Fixes
+
+* **build:** converts path to absolute path ([51b7e9a](https://github.com/laixiangran/ng-xdesign/commit/51b7e9a))
+* **i18n:** 修改语言代码 ([62d1b65](https://github.com/laixiangran/ng-xdesign/commit/62d1b65))
+
+
+### Features
+
+* **grid:** add grid ([ed685f4](https://github.com/laixiangran/ng-xdesign/commit/ed685f4))
+* 为动画增加静态贝塞尔曲线函数 ([3a0ad6e](https://github.com/laixiangran/ng-xdesign/commit/3a0ad6e))
+* 加入禁止动画指令 ([ee9c73e](https://github.com/laixiangran/ng-xdesign/commit/ee9c73e))
+* **i18n:** add NbCurrencyPipe、NbDecimalPipe、NbPercentPipe ([f46f4b9](https://github.com/laixiangran/ng-xdesign/commit/f46f4b9))
+
+
+### Performance Improvements
+
+* **i18n:** 删除多余代码 ([aea8974](https://github.com/laixiangran/ng-xdesign/commit/aea8974))
+* **i18n:** 重构pipe ([f9e28b1](https://github.com/laixiangran/ng-xdesign/commit/f9e28b1))
+
+
+
 <a name="7.2.9"></a>
 ## [7.2.9](https://github.com/laixiangran/ng-xdesign/compare/7.2.8...7.2.9) (2019-04-24)
 
