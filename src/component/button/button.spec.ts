@@ -1,6 +1,5 @@
 import { TestBed, ComponentFixture } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { Component, DebugElement, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NbButtonModule } from './button.module';
 
 @Component({

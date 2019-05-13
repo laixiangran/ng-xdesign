@@ -10,6 +10,7 @@ pre[class*="language-"] {
 	background: none;
 	text-shadow: 0 1px white;
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
@@ -136,15 +137,15 @@ pre[class*="language-"] {
 .token.entity {
 	cursor: help;
 }
-pre.line-numbers {
+pre[class*="language-"].line-numbers {
 	position: relative;
 	padding-left: 3.8em;
 	counter-reset: linenumber;
 }
 
-pre.line-numbers > code {
+pre[class*="language-"].line-numbers > code {
 	position: relative;
-    white-space: inherit;
+	white-space: inherit;
 }
 
 .line-numbers .line-numbers-rows {
@@ -176,7 +177,8 @@ pre.line-numbers > code {
 			display: block;
 			padding-right: 0.8em;
 			text-align: right;
-		}/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+		}
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -14890,4 +14892,4 @@ pre.line-numbers {
   padding-left: 1em;
 }
 
-/*# sourceMappingURL=app.8660ec.bundle.map*/
+/*# sourceMappingURL=app.195db5.bundle.map*/

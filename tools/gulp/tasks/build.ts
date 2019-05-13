@@ -16,8 +16,8 @@ const gulpCleanCss = require('gulp-clean-css');
  * default build task
  */
 task('build', sequenceTask(
-    'build:assets',
     'build:inline-assets',
+    'build:assets',
     'copy-readme',
 ));
 

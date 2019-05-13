@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { NbButtonComponent } from './button/button-e2e';
+import { NbButtonE2EComponent } from './button/button-e2e';
 
 const routes: Routes = [
     { path: '', redirectTo: 'button', pathMatch: 'full' },
-    { path: 'button', component: NbButtonComponent }
+    { path: 'button', component: NbButtonE2EComponent }
 ];
 
 @NgModule({

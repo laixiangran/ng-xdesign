@@ -4,15 +4,16 @@ import { NbRowDirective } from './row.directive';
 import { NbColDirective } from './col.directive';
 
 @NgModule({
-    imports: [CommonModule],
+    imports: [
+        CommonModule,
+    ],
     declarations: [
         NbRowDirective,
-        NbColDirective
+        NbColDirective,
     ],
     exports: [
         NbRowDirective,
-        NbColDirective
+        NbColDirective,
     ]
 })
-export class NbGridModule {
-}
+export class NbGridModule { }

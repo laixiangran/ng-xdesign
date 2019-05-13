@@ -2,20 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NbButtonComponent, NbButtonAnchorComponent } from './button';
 
-const components = [
-    NbButtonComponent,
-    NbButtonAnchorComponent,
-];
-
 @NgModule({
     imports: [
         CommonModule
     ],
     declarations: [
-        ...components
+        NbButtonComponent,
+        NbButtonAnchorComponent,
     ],
     exports: [
-        ...components
-    ]
+        NbButtonComponent,
+        NbButtonAnchorComponent,
+    ],
 })
-export class NbButtonModule {}
+export class NbButtonModule { }

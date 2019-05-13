@@ -6,7 +6,7 @@ import {
     selector: 'demo-e2e-button',
     templateUrl: './button-e2e.html'
 })
-export class NbButtonComponent implements OnInit {
+export class NbButtonE2EComponent implements OnInit {
     count = 0;
     isDisabled = false;
 
