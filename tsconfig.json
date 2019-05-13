@@ -11,7 +11,7 @@
         "sourceMap": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "outDir": "dist/packages",
+        "outDir": "dist/ng-xdesign-test",
         "moduleResolution": "node",
         "noUnusedParameters": true,
         "strictNullChecks": true,

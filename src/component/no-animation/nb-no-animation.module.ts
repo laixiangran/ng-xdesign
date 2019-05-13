@@ -13,4 +13,4 @@ import { NbNoAnimationDirective } from './nb-no-animation.directive';
     NbNoAnimationDirective
   ],
 })
-export class NbNoAnimationModule {}
+export class NbNoAnimationModule { }

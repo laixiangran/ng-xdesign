@@ -11,6 +11,6 @@ import { NbCodeHighlighterComponent } from './code-highlighter';
     ],
     exports: [
         NbCodeHighlighterComponent
-    ]
+    ],
 })
 export class NbCodeHighlighterModule { }
