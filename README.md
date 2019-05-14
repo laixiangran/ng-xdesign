@@ -1,11 +1,11 @@
-# ng-xdesign
+# ng-xdesign-test
 
-[![Build Status](https://travis-ci.com/laixiangran/ng-xdesign.svg?branch=develop)](https://travis-ci.com/laixiangran/ng-xdesign)
-[![codecov](https://codecov.io/gh/laixiangran/ng-xdesign/branch/develop/graph/badge.svg)](https://codecov.io/gh/laixiangran/ng-xdesign)
-[![GitHub Release Date](https://img.shields.io/github/release-date/laixiangran/ng-xdesign.svg)](https://github.com/laixiangran/ng-xdesign/releases)
-[![npm package](https://img.shields.io/npm/v/ng-xdesign-test.svg)](https://www.npmjs.com/package/ng-xdesign-test)
-[![npm downloads](https://img.shields.io/npm/dm/ng-xdesign-test.svg)](https://www.npmjs.com/package/ng-xdesign-test)
-[![GitHub License](https://img.shields.io/github/license/laixiangran/ng-xdesign.svg)](https://github.com/laixiangran/ng-xdesign/blob/master/LICENSE)
+[![Build Status](https://travis-ci.com/laixiangran/ng-xdesign-test.svg?branch=develop)](https://travis-ci.com/laixiangran/ng-xdesign-test)
+[![codecov](https://codecov.io/gh/laixiangran/ng-xdesign-test/branch/develop/graph/badge.svg)](https://codecov.io/gh/laixiangran/ng-xdesign-test)
+[![GitHub Release Date](https://img.shields.io/github/release-date/laixiangran/ng-xdesign-test.svg)](https://github.com/laixiangran/ng-xdesign-test/releases)
+[![npm package](https://img.shields.io/npm/v/ng-xdesign-test-test.svg)](https://www.npmjs.com/package/ng-xdesign-test-test)
+[![npm downloads](https://img.shields.io/npm/dm/ng-xdesign-test-test.svg)](https://www.npmjs.com/package/ng-xdesign-test-test)
+[![GitHub License](https://img.shields.io/github/license/laixiangran/ng-xdesign-test.svg)](https://github.com/laixiangran/ng-xdesign-test/blob/master/LICENSE)
 
 
 ## start

@@ -6,7 +6,7 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/laixiangran/ng-xdesign.git"
+        "url": "https://github.com/laixiangran/ng-xdesign-test.git"
     },
     "scripts": {
         "start": "cross-env NODE_ENV=development gulp serve",

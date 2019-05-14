@@ -36,7 +36,7 @@ to read on GitHub as well as in various git tools.
 
 Footer should contain a [closing reference to an issue](https://help.github.com/articles/closing-issues-via-commit-messages/) if any.
 
-Samples: (even more [samples](https://github.com/laixiangran/ng-xdesign/commits/master))
+Samples: (even more [samples](https://github.com/laixiangran/ng-xdesign-test/commits/master))
 
 ```
 docs(changelog): update change log to beta.5

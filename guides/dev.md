@@ -37,7 +37,7 @@ git merge develop
 npm run release
 ```
 
-发布之后，可以去 [travis](https://travis-ci.com/laixiangran/ng-xdesign) 查看最新的发布情况。
+发布之后，可以去 [travis](https://travis-ci.com/laixiangran/ng-xdesign-test) 查看最新的发布情况。
 
 如果没有问题，过几分钟后，travis 任务会自动推送最新的版本到 npm。
 

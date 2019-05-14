@@ -3,7 +3,7 @@ import { resolve } from 'path';
 export const config = {
     projectPath: resolve('.'),
     appPath: resolve('./src'),
-    moduleName: 'ng-xdesign',
+    moduleName: 'ng-xdesign-test',
     dist: resolve('./dist/ng-xdesign-test'),
     componentPath: resolve('./src/component'),
     demoPath: resolve('./src/demo'),
