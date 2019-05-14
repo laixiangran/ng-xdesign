@@ -17,7 +17,8 @@
         "e2e": "gulp e2e",
         "commit": "gulp commit",
         "build": "rimraf dist && ng-packagr -p src/component/package.json && gulp build",
-        "release": "gulp release && gulp github-release"
+        "release": "gulp release && gulp github-release",
+        "gc": "gulp generate:component"
     },
     "dependencies": {
         "@angular/animations": "~7.2.0",

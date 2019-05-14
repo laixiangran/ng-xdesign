@@ -103,10 +103,10 @@ npm run commit -- -m 'type(scope): subject'
 
 Component code are in `src/component`.
 
-You can use `gulp generate:component` to quickly scafford a component.
+You can use `npm run gc` to quickly scafford a component.
 
 ```bash
-$ gulp generate:component --name your-component
+$ npm run gc -- --name your-component
 ```
 
 A `your-component` folder will be created in `src/component`, and the contents are:
@@ -114,7 +114,7 @@ A `your-component` folder will be created in `src/component`, and the contents a
 ```bash
 your-component
 ├── index.ts
-├── public.api.ts
+├── public_api.ts
 ├── your-component.config.ts
 ├── your-component.html
 ├── your-component.less
@@ -128,7 +128,7 @@ and it will add your component entry to `src/component/index.ts`.
 
 You can then write a demo to test your component in `src/demo`.
 
-When you use `gulp generate:component --name your-component`, a folder will be generated in `src/demo` too.
+When you use `npm run gc -- --name your-component`, a folder will be generated in `src/demo` too.
 
 ```bash
 your-component
