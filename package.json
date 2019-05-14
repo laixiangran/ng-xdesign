@@ -16,7 +16,7 @@
         "lint": "gulp lint",
         "e2e": "gulp e2e",
         "commit": "gulp commit",
-        "build": "rimraf dist && ng-packagr -p src/component/package.json && gulp build",
+        "build": "gulp clean && ng build lib && gulp build",
         "release": "gulp release && gulp github-release",
         "gc": "gulp generate:component"
     },
@@ -37,6 +37,9 @@
         "zone.js": "^0.8.18"
     },
     "devDependencies": {
+        "@angular-devkit/build-angular": "^0.13.9",
+        "@angular-devkit/build-ng-packagr": "^0.13.9",
+        "@angular/cli": "^7.3.9",
         "@angular/compiler-cli": "~7.2.0",
         "@angular/platform-browser-dynamic": "~7.2.0",
         "@angular/platform-server": "~7.2.0",

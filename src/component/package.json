@@ -3,23 +3,16 @@
   "version": "7.2.20",
   "description": "An enterprise-class UI components based on One Design and Angular 7.",
   "author": "laixiangran <laixiangran@163.com>",
-  "keywords": ["angular", "one design"],
   "license": "MIT",
   "repository": {
       "type": "git",
       "url": "https://github.com/laixiangran/ng-xdesign-test.git"
   },
+  "keywords": ["angular", "one design"],
   "peerDependencies": {
     "@angular/animations": "^7.2.0",
     "@angular/cdk": "^7.3.0",
     "hammerjs": "^2.0.8",
     "prismjs": "^1.8.4"
-  },
-  "ngPackage": {
-    "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-    "lib": {
-      "entryFile": "public_api.ts"
-    },
-    "dest": "../../dist/ng-xdesign-test"
   }
 }
