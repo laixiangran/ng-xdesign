@@ -7,8 +7,26 @@
 [![npm downloads](https://img.shields.io/npm/dm/ng-xdesign-test.svg)](https://www.npmjs.com/package/ng-xdesign-test)
 [![GitHub License](https://img.shields.io/github/license/laixiangran/ng-xdesign-test.svg)](https://github.com/laixiangran/ng-xdesign-test/blob/master/LICENSE)
 
-
 ## start
+
+```base
+npm install ng-xdesign-test@latest
+```
+
+```javascript
+import { NbButtonModule } from "ng-xdesign-test";
+@NgModule({
+    imports: [
+        NbButtonModule
+    ]
+})
+```
+
+```html
+<button nb-button></button>
+```
+
+## develop
 
 ```bash
 $ npm install
