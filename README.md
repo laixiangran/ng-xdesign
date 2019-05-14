@@ -42,6 +42,8 @@ include `git commit` and `git push`
 npm run commit -- -m 'type(scope): subject'
 ```
 
+[AngularJS Git Commit Message Conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#)
+
 ## lint
 
 ```bash
