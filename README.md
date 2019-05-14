@@ -1,6 +1,6 @@
 # ng-xdesign-test
 
-[![Build Status](https://travis-ci.com/laixiangran/ng-xdesign.svg?branch=develop)](https://travis-ci.com/laixiangran/ng-xdesign)
+[![Build Status](https://travis-ci.com/laixiangran/ng-xdesign-test.svg?branch=develop)](https://travis-ci.com/laixiangran/ng-xdesign-test)
 [![codecov](https://codecov.io/gh/laixiangran/ng-xdesign-test/branch/develop/graph/badge.svg)](https://codecov.io/gh/laixiangran/ng-xdesign-test)
 [![GitHub Release Date](https://img.shields.io/github/release-date/laixiangran/ng-xdesign-test.svg)](https://github.com/laixiangran/ng-xdesign-test/releases)
 [![npm package](https://img.shields.io/npm/v/ng-xdesign-test.svg)](https://www.npmjs.com/package/ng-xdesign-test)
