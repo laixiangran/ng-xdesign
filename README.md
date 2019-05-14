@@ -1,6 +1,6 @@
 # ng-xdesign-test
 
-[![Build Status](https://travis-ci.com/laixiangran/ng-xdesign-test.svg?branch=develop)](https://travis-ci.com/laixiangran/ng-xdesign-test)
+[![Build Status](https://travis-ci.com/laixiangran/ng-xdesign.svg?branch=develop)](https://travis-ci.com/laixiangran/ng-xdesign)
 [![codecov](https://codecov.io/gh/laixiangran/ng-xdesign-test/branch/develop/graph/badge.svg)](https://codecov.io/gh/laixiangran/ng-xdesign-test)
 [![GitHub Release Date](https://img.shields.io/github/release-date/laixiangran/ng-xdesign-test.svg)](https://github.com/laixiangran/ng-xdesign-test/releases)
 [![npm package](https://img.shields.io/npm/v/ng-xdesign-test.svg)](https://www.npmjs.com/package/ng-xdesign-test)
@@ -12,15 +12,74 @@
 
 ```bash
 $ npm install
+
+$ npm start
 ```
 
-## dev
+## commit
+
+include `git commit` and `git push`
 
 ```bash
-$ npm run dev
+npm run commit -- -m 'type(scope): subject'
 ```
 
-### Compose a component
+## lint
+
+```bash
+$ npm run lint
+```
+
+## test
+
+```bash
+npm run test-once
+
+or
+
+npm run test-watch
+```
+
+## e2e
+
+```bash
+npm run e2e
+```
+
+## build
+
+```bash
+npm run build
+```
+
+## release workflow
+
+### merge develop
+
+```
+git checkout master
+git merge develop
+```
+
+### release
+
+```
+npm run release
+```
+
+发布之后，可以去 [travis](https://travis-ci.com/laixiangran/ng-xdesign) 查看最新的发布情况。
+
+如果没有问题，过几分钟后，travis 任务会自动推送最新的版本到 npm
+
+### merge master and push
+
+```
+git checkout develop
+git merge master
+npm run commit -- -m 'type(scope): subject'
+```
+
+## Compose a component
 
 Component code are in `src/component`.
 
@@ -45,7 +104,7 @@ your-component
 
 and it will add your component entry to `src/component/index.ts`.
 
-### Write a demo for your component
+## Write a demo for your component
 
 You can then write a demo to test your component in `src/demo`.
 
@@ -60,43 +119,4 @@ your-component
 ```
 
 But you will still config the `src/demo/app.router.ts` and `src/demo/app.module.ts`.
-
-## build
-
-
-### build component
-
-to build your component:
-
-```bash
-$ npm run build
-```
-
-### build dev demo app
-
-to build your demo app with aot:
-
-```bash
-$ npm run build:demo:aot
-```
-
-## lint
-
-to lint your code:
-
-```bash
-$ npm run lint
-```
-
-## docs
-
-to generate api docs and guide docs:
-
-```bash
-$ npm run docs
-```
-
-api docs will be in `docs/dist`.
-
-guide docs will be in `docs/dist/guides`;
 

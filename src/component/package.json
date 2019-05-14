@@ -1,7 +1,7 @@
 {
   "name": "ng-xdesign-test",
   "version": "7.2.20",
-  "description": "xdesign - A enterprize angular ui component library",
+  "description": "An enterprise-class UI components based on One Design and Angular 7.",
   "author": "laixiangran <laixiangran@163.com>",
   "keywords": ["angular", "one design"],
   "license": "MIT",
