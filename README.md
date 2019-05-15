@@ -7,8 +7,26 @@
 [![npm downloads](https://img.shields.io/npm/dm/ng-xdesign-test.svg)](https://www.npmjs.com/package/ng-xdesign-test)
 [![GitHub License](https://img.shields.io/github/license/laixiangran/ng-xdesign-test.svg)](https://github.com/laixiangran/ng-xdesign-test/blob/master/LICENSE)
 
-
 ## start
+
+```base
+npm install ng-xdesign-test@latest
+```
+
+```javascript
+import { NbButtonModule } from "ng-xdesign-test";
+@NgModule({
+    imports: [
+        NbButtonModule
+    ]
+})
+```
+
+```html
+<button nb-button></button>
+```
+
+## develop
 
 ```bash
 $ npm install
@@ -23,6 +41,8 @@ include `git commit` and `git push`
 ```bash
 npm run commit -- -m 'type(scope): subject'
 ```
+
+[AngularJS Git Commit Message Conventions](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#)
 
 ## lint
 
@@ -83,10 +103,10 @@ npm run commit -- -m 'type(scope): subject'
 
 Component code are in `src/component`.
 
-You can use `gulp generate:component` to quickly scafford a component.
+You can use `npm run gc` to quickly scafford a component.
 
 ```bash
-$ gulp generate:component --name your-component
+$ npm run gc -- --name your-component
 ```
 
 A `your-component` folder will be created in `src/component`, and the contents are:
@@ -94,7 +114,7 @@ A `your-component` folder will be created in `src/component`, and the contents a
 ```bash
 your-component
 ├── index.ts
-├── public.api.ts
+├── public_api.ts
 ├── your-component.config.ts
 ├── your-component.html
 ├── your-component.less
@@ -108,7 +128,7 @@ and it will add your component entry to `src/component/index.ts`.
 
 You can then write a demo to test your component in `src/demo`.
 
-When you use `gulp generate:component --name your-component`, a folder will be generated in `src/demo` too.
+When you use `npm run gc -- --name your-component`, a folder will be generated in `src/demo` too.
 
 ```bash
 your-component

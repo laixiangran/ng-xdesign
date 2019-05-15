@@ -12,10 +12,9 @@ import {
 } from '../component/public_api';
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.router';
-import { GuideComponentDemo } from './docs';
-import { IconsComponentDemo } from './icons';
+import { StartDemo } from './start';
+import { IconsDemo } from './icons';
 import { TypographyDemo } from './typography';
-import { I18nComponentDemo } from './i18n';
 import { ButtonDemoModule } from './button';
 import { registerLocaleData } from '@angular/common';
 import zh_hans from '@angular/common/locales/zh-Hans'; // 简体中文
@@ -39,10 +38,9 @@ const frCALocale: NbI18nInterface  = {
 @NgModule({
     declarations: [
         AppComponent,
-        GuideComponentDemo,
-        IconsComponentDemo,
+        StartDemo,
+        IconsDemo,
         TypographyDemo,
-        I18nComponentDemo,
     ],
     imports: [
         BrowserModule,

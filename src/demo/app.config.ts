@@ -34,18 +34,6 @@ export const routerList = [{
     'routerLinkActive': 'active',
     'class': 'list-item',
     'currentRouter': false
-},  {
-    'text': 'i18n',
-    'routerLink': '',
-    'routerLinkActive': '',
-    'class': 'list-item list-item-desc',
-    'currentRouter': false
-}, {
-    'text': 'i18n',
-    'routerLink': '/i18n',
-    'routerLinkActive': 'active',
-    'class': 'list-item',
-    'currentRouter': false
 }, {
     'text': 'Button',
     'routerLink': '',

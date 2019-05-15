@@ -1,3 +1,13 @@
+<a name="7.2.23"></a>
+## [7.2.23](https://github.com/laixiangran/ng-xdesign-test/compare/7.2.22...7.2.23) (2019-05-15)
+
+
+
+<a name="7.2.22"></a>
+## [7.2.22](https://github.com/laixiangran/ng-xdesign-test/compare/7.2.21...7.2.22) (2019-05-15)
+
+
+
 <a name="7.2.21"></a>
 ## [7.2.21](https://github.com/laixiangran/ng-xdesign-test/compare/7.2.20...7.2.21) (2019-05-14)
 

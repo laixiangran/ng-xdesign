@@ -4,17 +4,15 @@
  */
 
 import { Routes } from '@angular/router';
-import { GuideComponentDemo } from './docs';
-import { IconsComponentDemo } from './icons';
-import { I18nComponentDemo } from './i18n';
+import { StartDemo } from './start';
+import { IconsDemo } from './icons';
 import { TypographyDemo } from './typography';
 import { ButtonDemo } from './button';
 
 export const appRoutes: Routes = [
     { path: '', pathMatch: 'full', redirectTo: 'start' },
-    { path: 'start', component: GuideComponentDemo },
-    { path: 'icons', component: IconsComponentDemo },
-    { path: 'i18n', component: I18nComponentDemo },
+    { path: 'start', component: StartDemo },
+    { path: 'icons', component: IconsDemo },
     { path: 'typography', component: TypographyDemo },
     { path: 'components', pathMatch: 'full', redirectTo: 'components/button' },
     { path: 'components/button', component: ButtonDemo },

@@ -36,7 +36,7 @@ task('generate:component:copy', copyAndReplace(config.scaffordPath, config.compo
  */
 task('generate:component:update', () => {
     const name = yargs.argv.name;
-    const entry = join(config.componentPath, 'index.ts');
+    const entry = join(config.componentPath, 'public_api.ts');
 
     let indexContent = readFileSync(entry, 'utf-8');
     indexContent += `export * from './${name}/index';`;

@@ -1,6 +1,6 @@
 {
     "name": "ng-xdesign-test",
-    "version": "7.2.21",
+    "version": "7.2.23",
     "description": "An enterprise-class UI components based on One Design and Angular 7.",
     "author": "laixiangran <laixiangran@163.com>",
     "license": "MIT",
@@ -15,9 +15,11 @@
         "test": "gulp test",
         "lint": "gulp lint",
         "e2e": "gulp e2e",
+        "demo": "gulp build:demo",
         "commit": "gulp commit",
-        "build": "rimraf dist && ng-packagr -p src/component/package.json && gulp build",
-        "release": "gulp release && gulp github-release"
+        "build": "gulp clean && ng build lib && gulp build",
+        "release": "gulp release && gulp github-release",
+        "gc": "gulp generate:component"
     },
     "dependencies": {
         "@angular/animations": "~7.2.0",
@@ -36,6 +38,9 @@
         "zone.js": "^0.8.18"
     },
     "devDependencies": {
+        "@angular-devkit/build-angular": "^0.13.9",
+        "@angular-devkit/build-ng-packagr": "^0.13.9",
+        "@angular/cli": "^7.3.9",
         "@angular/compiler-cli": "~7.2.0",
         "@angular/platform-browser-dynamic": "~7.2.0",
         "@angular/platform-server": "~7.2.0",
