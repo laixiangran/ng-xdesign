@@ -15,6 +15,7 @@
         "test": "gulp test",
         "lint": "gulp lint",
         "e2e": "gulp e2e",
+        "demo": "gulp build:demo",
         "commit": "gulp commit",
         "build": "gulp clean && ng build lib && gulp build",
         "release": "gulp release && gulp github-release",

@@ -7,6 +7,10 @@ import { config } from '../utils/config';
 import { readFileSync, writeFileSync } from 'fs';
 import { sync as glob } from 'glob';
 
+const helper = require('../../../config/helper');
+const webpack = require('webpack');
+const devConfigPath = join(config.webpackConfigPath, 'webpack.dev');
+const prodConfigPath = join(config.webpackConfigPath, 'webpack.prod');
 const less = require('gulp-less');
 const lessAutoprefix = require('less-plugin-autoprefix');
 const autoprefixPlugin = new lessAutoprefix({ browsers: ['last 2 versions'] });
@@ -100,4 +104,36 @@ task('build:compile:less', () => {
         }))
         .pipe(gulpCleanCss())
         .pipe(dest(join(config.dist, 'asset/css')));
+});
+
+task('build:demo', sequenceTask('docs', 'build:demo:webpack', 'build:replace:basehref'));
+
+task('build:demo:webpack', (cb?: Function) => {
+    let buildConfig = require(prodConfigPath);
+
+    if (helper.isDev()) {
+        buildConfig = require(devConfigPath);
+    }
+
+    webpack(buildConfig, (err: any, stats: any) => {
+        if (err) {
+            console.log('webpack', err);
+        }
+
+        console.log('[webpack]', stats.toString({
+            chunks: false,
+            errorDetails: true
+        }));
+
+        if (cb) {
+            cb();
+        }
+    });
+});
+
+task('build:replace:basehref', () => {
+    const docsIndex = join(config.appPath, '../docs/index.html');
+    let indexContent = readFileSync(docsIndex, 'utf-8');
+    indexContent = indexContent.replace('base href="/"', 'base href="/ng-xdesign-test/"');
+    writeFileSync(docsIndex, indexContent, 'utf-8');
 });
