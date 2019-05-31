@@ -14,7 +14,7 @@ const DISABLED_CLASSNAME = '[key: string]';
   }
 })
 export class NbNoAnimationDirective implements OnChanges, AfterViewInit {
-  @Input() @InputBoolean() nzNoAnimation: boolean = false;
+  @Input() @InputBoolean() nbNoAnimation: boolean = false;
 
   constructor(
     private element: ElementRef,
@@ -35,7 +35,7 @@ export class NbNoAnimationDirective implements OnChanges, AfterViewInit {
     if (!element) {
       return;
     }
-    if (this.nzNoAnimation || this.animationType === 'NoopAnimations') {
+    if (this.nbNoAnimation || this.animationType === 'NoopAnimations') {
       this.renderer.addClass(element, DISABLED_CLASSNAME);
     } else {
       this.renderer.removeClass(element, DISABLED_CLASSNAME);

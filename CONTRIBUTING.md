@@ -1,4 +1,4 @@
-# Contributing to NG-XDESIGN
+# Contributing to ng-xdesign-test
 
 -   [Coding Rules](#rules)
 -   [Commit Message Guidelines](#commit)
@@ -14,7 +14,7 @@ To ensure consistency throughout the source code, keep these rules in mind as yo
 
 We have very precise rules over how our git commit messages can be formatted. This leads to **more
 readable messages** that are easy to follow when looking through the **project history**. But also,
-we use the git commit messages to **generate the NG-XDESIGN change log**.
+we use the git commit messages to **generate the ng-xdesign-test change log**.
 
 ### Commit Message Format
 

@@ -6,7 +6,7 @@ import { NbTabHeaderComponent } from './tab-header';
 import { NbTabTitleDirective } from './tab-title.directive';
 import { AttachDirective } from './attach.directive';
 import { NbInkBarComponent } from './ink-bar';
-import { NbButtonModule } from '../button';
+import { NbButtonModule } from '../button/index';
 
 const components = [
     NbTabsComponent,
