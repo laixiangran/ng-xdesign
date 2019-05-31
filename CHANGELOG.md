@@ -1,3 +1,13 @@
+<a name="7.2.24"></a>
+## [7.2.24](https://github.com/laixiangran/ng-xdesign-test/compare/7.2.23...7.2.24) (2019-05-31)
+
+
+### Bug Fixes
+
+* 修复NgModule无法引入的错误 ([01d7ebe](https://github.com/laixiangran/ng-xdesign-test/commit/01d7ebe))
+
+
+
 <a name="7.2.23"></a>
 ## [7.2.23](https://github.com/laixiangran/ng-xdesign-test/compare/7.2.22...7.2.23) (2019-05-15)
 
